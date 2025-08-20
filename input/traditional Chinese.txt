@@ -1,0 +1,2208 @@
+Traditional Chinese characters - Wikipedia
+Jump to content
+Main menu
+Main menu
+move to sidebar
+hide
+Navigation
+Main page
+Contents
+Current events
+Random article
+About Wikipedia
+Contact us
+Contribute
+Help
+Learn to edit
+Community portal
+Recent changes
+Upload file
+Special pages
+Search
+Search
+Appearance
+Donate
+Create account
+Log in
+Personal tools
+Donate
+Create account
+Log in
+Pages for logged out editors
+learn more
+Contributions
+Talk
+Contents
+move to sidebar
+hide
+(Top)
+1
+Terminology
+2
+Use by region
+Toggle Use by region subsection
+2.1
+Mainland China
+2.2
+Hong Kong and Macau
+2.3
+Taiwan
+2.4
+Singapore
+2.5
+Philippines
+2.6
+North America
+3
+Use on computers
+Toggle Use on computers subsection
+3.1
+Encoding
+3.2
+Input methods
+3.3
+Typefaces
+3.4
+Webpages
+4
+Comparison with other scripts
+5
+See also
+6
+References
+Toggle the table of contents
+Traditional Chinese characters
+72 languages
+Afrikaans
+العربية
+Asturianu
+Azərbaycanca
+تۆرکجه
+বাংলা
+閩南語 / Bân-lâm-gí
+Български
+Dansk
+Deutsch
+Español
+Esperanto
+Euskara
+فارسی
+Français
+Frysk
+Galego
+한국어
+Հայերեն
+हिन्दी
+Igbo
+Ilokano
+Bahasa Indonesia
+Íslenska
+Italiano
+עברית
+Jawa
+ქართული
+Қазақша
+Ladin
+Ladino
+Latviešu
+Magyar
+Македонски
+मराठी
+მარგალური
+مصرى
+Bahasa Melayu
+閩東語 / Mìng-dĕ̤ng-ngṳ̄
+မြန်မာဘာသာ
+Nederlands
+नेपाली
+日本語
+Norsk bokmål
+Norsk nynorsk
+ਪੰਜਾਬੀ
+پنجابی
+پښتو
+ភាសាខ្មែរ
+Polski
+Português
+Русский
+සිංහල
+Simple English
+Српски / srpski
+Srpskohrvatski / српскохрватски
+Suomi
+Svenska
+Tagalog
+ไทย
+Тоҷикӣ
+Türkçe
+Українська
+اردو
+Vahcuengh
+Tiếng Việt
+文言
+Winaray
+吴语
+粵語
+中文
+Kumoring
+Edit links
+Article
+Talk
+English
+Read
+Edit
+View history
+Tools
+Tools
+move to sidebar
+hide
+Actions
+Read
+Edit
+View history
+General
+What links here
+Related changes
+Upload file
+Permanent link
+Page information
+Cite this page
+Get shortened URL
+Download QR code
+Print/export
+Download as PDF
+Printable version
+In other projects
+Wikimedia Commons
+Wikidata item
+Appearance
+move to sidebar
+hide
+From Wikipedia, the free encyclopedia
+Standardized set of Chinese characters
+Traditional Chinese
+Script type
+Logographic
+Published
+Taiwan: (
+1979
+1982
+)
+Hong Kong: (
+1986
+)
+Direction
+Left-to-right
+Top-to-bottom, columns right to left
+Official script
+Taiwan
+,
+Hong Kong
+,
+Macau
+Languages
+Chinese
+Related scripts
+Parent systems
+Oracle bone script
+Small seal script
+Clerical script
+Regular script
+Traditional Chinese
+Sister systems
+Simplified characters
+Kanji
+Hanja
+Chữ Nôm
+Bopomofo
+Khitan large script
+Khitan small script
+Sawndip
+ISO 15924
+ISO 15924
+Hant
+(502)
+, ​Han (Traditional variant)
+Chinese name
+Traditional Chinese
+正體字
+Simplified Chinese
+正体字
+Literal meaning
+Orthodox form characters
+Transcriptions
+Standard Mandarin
+Hanyu Pinyin
+Zhèngtǐzì
+Bopomofo
+ㄓㄥˋ
+ㄊㄧˇ
+ㄗˋ
+Wade–Giles
+Chêng
+4
+-tʻi
+3
+-tzŭ
+4
+Tongyong Pinyin
+Jhèng-tǐ-zìh
+IPA
+[ʈʂə̂ŋ.tʰì.tsɹ̩̂]
+Yue: Cantonese
+Yale Romanization
+Jing tái jih
+Jyutping
+zing3 tai2 zi6
+IPA
+[tsɪŋ˧.tʰɐj˧˥.tsi˨]
+Alternative Chinese name
+Traditional Chinese
+繁體字
+Simplified Chinese
+繁体字
+Literal meaning
+Complex form characters
+Transcriptions
+Standard Mandarin
+Hanyu Pinyin
+Fántǐzì
+Bopomofo
+ㄈㄢˊ
+ㄊㄧˇ
+ㄗˋ
+Wade–Giles
+Fan
+2
+-tʻi
+3
+-tzŭ
+4
+Tongyong Pinyin
+Fán-tǐ-zìh
+IPA
+[fǎn.tʰì.tsɹ̩̂]
+Yue: Cantonese
+Yale Romanization
+Fàahn tái jih
+Jyutping
+faan4 tai2 zi6
+IPA
+[fan˩ tʰɐj˧˥ tsi˨]
+This article contains
+phonetic transcriptions
+in the
+International Phonetic Alphabet
+(IPA)
+. For an introductory guide on IPA symbols, see
+Help:IPA
+. For the distinction between
+[ ]
+,
+/ /
+and ⟨
+⟩, see
+IPA § Brackets and transcription delimiters
+.
+Chinese characters
+Chinese family of scripts
+Written Chinese
+Kanji
+Hanja
+Chữ Hán
+Evolution of
+script styles
+Neolithic symbols in China
+Oracle bone
+Bronze
+Seal
+Large
+Small
+Bird-worm
+Clerical
+Cursive
+Semi-cursive
+Regular
+Flat brush
+Modern typefaces
+Fangsong
+Ming
+Hei
+Properties and
+classification
+Components
+Strokes
+order
+Radicals
+Orthography
+jiu zixing
+xin zixing
+Digital encoding
+Collation and standards
+Kangxi Dictionary
+forms
+(1716)
+Commonly Used Characters
+(PRC, 2013)
+Commonly-Used Characters
+(Hong Kong, 2007)
+Nan Min Recommended Characters
+(Taiwan, 2009)
+Standard Form of National Characters
+(Taiwan, 1982)
+Jōyō
+kanji
+(Japan, 2010)
+Reforms
+Simplified characters
+second round
+Traditional characters
+debate
+Japanese script reform
+kyūjitai
+Homographs
+and readings
+Literary and colloquial readings
+Kanbun
+Idu
+Variants
+Zetian characters
+Derived systems
+Kana
+man'yōgana
+hiragana
+katakana
+Jurchen script
+Khitan
+large
+small
+Nüshu
+Bopomofo
+Slavonic transcription
+Transliteration of Chinese
+v
+t
+e
+Traditional Chinese characters
+are a standard set of
+Chinese character
+forms used to
+write Chinese languages
+. In
+Taiwan
+, the set of traditional characters is regulated by the
+Ministry of Education
+and standardized in the
+Standard Form of National Characters
+. These forms were predominant in written Chinese until the middle of the 20th century,
+[
+1
+]
+[
+2
+]
+when various
+countries that use Chinese characters
+began standardizing simplified sets of characters, often with characters that existed before as well-known
+variants
+of the predominant forms.
+[
+3
+]
+[
+4
+]
+Simplified characters
+as codified by the
+People's Republic of China
+are predominantly used in
+mainland China
+, Malaysia, and Singapore. "Traditional" as such is a
+retronym
+applied to non-simplified character sets in the wake of widespread use of simplified characters. Traditional characters are commonly used in
+Taiwan
+,
+Hong Kong
+, and
+Macau
+, as well as in most
+overseas Chinese
+communities outside of Southeast Asia.
+[
+5
+]
+As for non-Chinese languages written using Chinese characters, Japanese
+kanji
+include many simplified characters known as
+shinjitai
+standardized after World War II,
+sometimes distinct from their simplified Chinese counterparts
+. Korean
+hanja
+, still used to a certain extent in
+South Korea
+, remain virtually identical to traditional characters, with variations between the two forms largely stylistic.
+There has historically been a
+debate on traditional and simplified Chinese characters
+.
+[
+6
+]
+[
+7
+]
+Because the simplifications are fairly systematic, it is possible to convert computer-encoded characters between the two sets, with the main issue being
+ambiguities in simplified representations
+resulting from the merging of previously distinct character forms. Many Chinese online newspapers allow users to switch between these character sets.
+[
+8
+]
+Terminology
+[
+edit
+]
+Traditional characters are known by different names throughout the Chinese-speaking world. The government of Taiwan officially refers to traditional Chinese characters as
+正體字
+;
+正体字
+;
+zhèngtǐzì
+; 'orthodox characters'.
+[
+9
+]
+This term is also used outside Taiwan to distinguish standard characters, including both simplified, and traditional, from other
+variants and idiomatic characters
+.
+[
+10
+]
+Users of traditional characters elsewhere, as well as those using simplified characters, call traditional characters
+繁體字
+;
+繁体字
+;
+fántǐzì
+; 'complex characters',
+老字
+;
+lǎozì
+; 'old characters', or
+全體字
+;
+全体字
+;
+quántǐzì
+; 'full characters' to distinguish them from simplified characters.
+Some argue that since traditional characters are often the original standard forms, they should not be called 'complex'. Conversely, there is a common objection to the description of traditional characters as 'standard', due to them not being used by a large population of Chinese speakers. Additionally, as the process of Chinese character creation often made many characters more elaborate over time, there is sometimes a hesitation to characterize them as 'traditional'.
+[
+11
+]
+Some people refer to traditional characters as 'proper characters' (
+正字
+;
+zhèngzì
+or
+正寫
+;
+zhèngxiě
+) and to simplified characters as
+簡筆字
+;
+简笔字
+;
+jiǎnbǐzì
+; 'simplified-stroke characters' or
+減筆字
+;
+减笔字
+;
+jiǎnbǐzì
+; 'reduced-stroke characters', as the words for
+simplified
+and
+reduced
+are homophonous in
+Standard Chinese
+, both pronounced as
+jiǎn
+.
+Use by region
+[
+edit
+]
+Further information:
+Written Chinese § Evolution
+The modern shapes of traditional Chinese characters first appeared with the emergence of the
+clerical script
+during the
+Han dynasty
+c.
+200 BCE
+, with the sets of forms and norms more or less stable since the
+Southern and Northern dynasties
+period
+c.
+the 5th century
+.
+Mainland China
+[
+edit
+]
+The
+Guangzhou Daily
+, an official Communist Party newspaper, uses traditional Chinese characters in its branding.
+Although the majority of Chinese text in mainland China are
+simplified characters
+, there is no legislation prohibiting the use of traditional Chinese characters, and often traditional Chinese characters remain in use for stylistic and commercial purposes, such as in shopfront displays and advertising.
+[
+12
+]
+Traditional Chinese characters remain ubiquitous on buildings that predate the promulgation of the current simplification scheme, such as former government buildings, religious buildings, educational institutions, and historical monuments. Traditional Chinese characters continue to be used for ceremonial, cultural, scholarly/academic research, and artistic/decorative purposes.
+[
+12
+]
+In the People's Republic of China, traditional Chinese characters are standardized according to the
+Table of Comparison between Standard, Traditional and Variant Chinese Characters
+.
+[
+13
+]
+Dictionaries published in mainland China generally show both simplified and their traditional counterparts.
+[
+14
+]
+There are differences between the accepted traditional forms in mainland China and elsewhere, for example the accepted traditional form of
+产
+in mainland China is
+産
+(also the accepted form in Japan and Korea), while in Hong Kong, Macau and Taiwan the accepted form is
+產
+(also the accepted form in Vietnamese
+chữ Nôm
+).
+[
+15
+]
+The PRC tends to print material intended for people in Hong Kong, Macau and Taiwan, and overseas Chinese in traditional characters. For example, versions of the
+People's Daily
+are printed in traditional characters, and both
+People's Daily
+and
+Xinhua
+have traditional character versions of their website available, using
+Big5
+encoding.
+[
+16
+]
+[
+17
+]
+Mainland companies selling products in Hong Kong, Macau and Taiwan use traditional characters in order to communicate with consumers; the inverse is equally true as well. In digital media, many cultural phenomena imported from Hong Kong and Taiwan into mainland China, such as music videos, karaoke videos, subtitled movies, and subtitled dramas, use traditional Chinese characters.
+Hong Kong and Macau
+[
+edit
+]
+This article
+needs attention from an expert in China
+. The specific problem is:
+The differences between traditional characters as used in Taiwan versus in Hong Kong.
+WikiProject China
+may be able to help recruit an expert.
+(
+September 2023
+)
+In
+Hong Kong
+and
+Macau
+, traditional characters were retained during the colonial period, while the mainland adopted simplified characters. Simplified characters are contemporaneously used to accommodate immigrants and tourists, often from the mainland.
+[
+18
+]
+The increasing use of simplified characters has led to concern among residents regarding protecting what they see as their local heritage.
+[
+19
+]
+[
+20
+]
+Taiwan
+[
+edit
+]
+Taiwan
+has never adopted simplified characters. The use of simplified characters in government documents and educational settings is discouraged by the government of Taiwan.
+[
+21
+]
+[
+22
+]
+[
+23
+]
+[
+24
+]
+Nevertheless, with sufficient context simplified characters are likely to be successfully read by those used to traditional characters, especially given some previous exposure. Many simplified characters were previously variants that had long been in some use, with systematic stroke simplifications used in folk handwriting since antiquity.
+[
+25
+]
+[
+26
+]
+Singapore
+[
+edit
+]
+Traditional characters were recognized as the official script in Singapore until 1969, when the government officially adopted Simplified characters.
+[
+27
+]
+Traditional characters still are widely used in contexts such as in baby and corporation names, advertisements, decorations, official documents and in newspapers.
+[
+8
+]
+Philippines
+[
+edit
+]
+The
+Chinese Filipino
+community continues to be one of the most conservative in Southeast Asia regarding simplification.
+[
+citation needed
+]
+Although major public universities teach in simplified characters, many well-established Chinese schools still use traditional characters. Publications such as the
+Chinese Commercial News
+,
+World News
+, and
+United Daily News
+all use traditional characters, as do some Hong Kong–based magazines such as
+Yazhou Zhoukan
+. The
+Philippine Chinese Daily
+uses simplified characters.
+Job announcement in a Filipino Chinese daily newspaper written in traditional Chinese characters
+North America
+[
+edit
+]
+With most having immigrated to the United States during the second half of the 19th century, Chinese Americans have long used traditional characters. When not providing both, US public notices and signs in Chinese are generally written in traditional characters, more often than in simplified characters.
+[
+28
+]
+Use on computers
+[
+edit
+]
+Encoding
+[
+edit
+]
+Main article:
+Chinese character encoding
+See also:
+Han unification
+In the past, traditional Chinese was most often encoded on computers using the
+Big5
+standard, which favored traditional characters. However, the ubiquitous
+Unicode
+standard gives equal weight to simplified and traditional Chinese characters, and has become by far the most popular encoding for Chinese-language text.
+Input methods
+[
+edit
+]
+Main article:
+Chinese input methods
+There are various
+input method editors
+(IMEs) available for the
+input of Chinese characters
+. Many characters, often
+dialectical
+variants, are encoded in Unicode but cannot be inputted using certain IMEs, with one example being the
+Shanghainese
+-language character
+U+20C8E
+𠲎
+CJK UNIFIED IDEOGRAPH-20C8E
+—a composition of
+伐
+with the
+⼝
+'MOUTH'
+radical—used instead of the Standard Chinese
+嗎
+;
+吗
+.
+[
+citation needed
+]
+Typefaces
+[
+edit
+]
+Further information:
+List of CJK fonts
+Typefaces
+often use the initialism
+TC
+to signify the use of traditional Chinese characters, as well as
+SC
+for
+simplified Chinese characters
+. In addition, the
+Noto
+family of typefaces, for example, also provides separate fonts for the traditional character set used in Taiwan (
+TC
+) and the set used in Hong Kong (
+HK
+).
+[
+29
+]
+Webpages
+[
+edit
+]
+Most Chinese-language webpages now use Unicode for their text. The
+World Wide Web Consortium
+(W3C) recommends the use of the
+language tag
+zh-Hant
+to specify webpage content written with traditional characters.
+[
+30
+]
+ISO 15924
+offers
+Hant
+to mark text in traditional Chinese and
+Hntl
+[
+31
+]
+for text mixing traditional Chinese and Latin characters, sometimes used for
+Taiwanese Hokkien
+.
+Comparison with other scripts
+[
+edit
+]
+In the
+Japanese writing system
+,
+kyujitai
+are traditional forms, which were simplified to create
+shinjitai
+for standardized Japanese use following World War II. Kyūjitai are mostly congruent with the traditional characters in Chinese, save for minor stylistic variation. Characters that are not included in the
+jōyō kanji
+list are generally recommended to be printed in their traditional forms, with a few exceptions. Additionally, there are
+kokuji
+, which are kanji wholly created in Japan, rather than originally being borrowed from China.
+In the
+Korean writing system
+,
+hanja
+—replaced almost entirely by
+hangul
+in
+South Korea
+and totally replaced in
+North Korea
+—are mostly identical with their traditional counterparts, save minor stylistic variations. As with Japanese, there are autochthonous hanja, known as
+gukja
+.
+Traditional Chinese characters are also used by non-Chinese ethnic groups. The
+Maniq people
+living in
+Thailand
+and
+Malaysia
+use Chinese characters to write the
+Kensiu language
+.
+[
+32
+]
+[
+33
+]
+See also
+[
+edit
+]
+Modern Chinese characters
+Chữ Nôm
+Ambiguities in Chinese character simplification
+References
+[
+edit
+]
+^
+Wei, Bi (2014).
+"The Origin and Evolvement of Chinese Characters"
+(PDF)
+.
+Gdańskie Studia Azji Wschodniej
+.
+5
+:
+33–
+44
+. Retrieved
+29 September
+2023
+– via CORE.
+^
+Kornicki, P. F.
+(2011).
+"A Transnational Approach to East Asian Book History"
+. In Chakravorty, Swapan; Gupta, Abhijit (eds.).
+New Word Order: Transnational Themes in Book History
+. Worldview Publications. pp.
+65–
+79.
+ISBN
+978-81-920651-1-3
+.
+^
+Pae, H. K. (2020). "Chinese, Japanese, and Korean Writing Systems: All East-Asian but Different Scripts".
+Script Effects as the Hidden Drive of the Mind, Cognition, and Culture
+. Literacy Studies (Perspectives from Cognitive Neurosciences, Linguistics, Psychology and Education). Vol. 21. Cham: Springer. pp.
+71–
+105.
+doi
+:
+10.1007/978-3-030-55152-0_5
+.
+ISBN
+978-3-030-55151-3
+.
+S2CID
+234940515
+.
+^
+Twine, Nanette (1991).
+Language and the Modern State: The Reform of Written Japanese
+. Taylor & Francis.
+ISBN
+978-0-415-00990-4
+.
+^
+Yan, Pu; Yasseri, Taha (2016).
+"Two Diverging Roads: A Semantic Network Analysis of Chinese Social Connection ("Guanxi") on Twitter"
+.
+Frontiers in Digital Humanities
+.
+4
+11.
+arXiv
+:
+1605.05139
+.
+doi
+:
+10.3389/fdigh.2017.00011
+.
+^
+O'Neill, Mark (8 June 2020).
+"China Should Restore Traditional Characters-Taiwan Scholar"
+.
+EJ Insight
+. Hong Kong Economic Journal
+. Retrieved
+30 March
+2021
+.
+^
+Sui, Cindy (16 June 2011).
+"Taiwan Deletes Simplified Chinese from Official Sites"
+. BBC
+. Retrieved
+30 March
+2021
+.
+^
+a
+b
+Lin Youshun (林友順) (2009).
+大馬華社遊走於簡繁之間
+[The Malaysian Chinese Community Wanders Between Simplified and Traditional Characters] (in Chinese). Yazhou Zhoukan. Archived from
+the original
+on 23 May 2021
+. Retrieved
+30 March
+2021
+.
+^
+查詢結果
+.
+Ministry of Justice (Republic of China)
+. 26 September 2014
+. Retrieved
+7 October
+2014
+.
+^
+Academy of Social Sciences (1978).
+Modern Chinese Dictionary
+. Beijing: The Commercial Press.
+^
+Norman, Jerry (1988).
+Chinese
+. Cambridge: Cambridge University Press. p. 81.
+^
+a
+b
+"Taiwan promotes traditional Chinese characters"
+. Etaiwannews.com. 1 January 2009
+. Retrieved
+9 February
+2014
+.
+^
+"国务院关于公布《通用规范汉字表》的通知"
+[Notice of the State Council on the publication of the "List of Commonly Used Standard Chinese Characters"].
+Gov.cn
+(in Chinese).
+State Council of the People's Republic of China
+. 5 June 2013.
+^
+DeFrancis, John
+(1984).
+The Chinese Language: Fact and Fantasy
+. Honolulu: University of Hawaii Press. p. 291.
+ISBN
+0-585-31289-3
+.
+OCLC
+45733542
+.
+^
+印刷通用汉字字形表 (List of character forms of General Used Chinese characters for Publishing)
+(in Chinese). 文字改革出版社. 1986.
+^
+"People's Daily"
+. 11 November 2024
+. Retrieved
+11 November
+2024
+.
+^
+"Xinhua News"
+. 11 November 2024
+. Retrieved
+11 November
+2024
+.
+^
+Li Hanwen (李翰文) (24 February 2016).
+分析：中國與香港之間的「繁簡矛盾」
+.
+BBC News
+(in Chinese)
+. Retrieved
+1 July
+2018
+.
+^
+Lai, Ying-kit (17 July 2013).
+"Hong Kong Actor's Criticism of Simplified Chinese Character Use Stirs up Passions Online"
+.
+Post Magazine
+. South China Morning Post
+. Retrieved
+1 July
+2018
+.
+^
+"Hong Kong TV Station Criticized for Using Simplified Chinese"
+.
+SINA English
+. 1 March 2016
+. Retrieved
+1 July
+2018
+.
+^
+Chiang, Evelyn (11 April 2006).
+"Character Debate Ends up Being Nothing but Hot Air: Traditional Chinese Will Always Be Used in Education, Minister Says"
+.
+Taiwan News
+. Archived from
+the original
+on 25 May 2021
+. Retrieved
+25 May
+2021
+.
+^
+"Taiwan Rules out Official Use of Simplified Chinese"
+.
+Taiwan News
+. Central News Agency. 17 June 2011. Archived from
+the original
+on 25 May 2021
+. Retrieved
+25 May
+2021
+.
+^
+寫作測驗
+[Writing Test].
+Guozhong jiaoyu huikao
+(in Chinese).
+若寫作測驗文章中出現簡體字，在評閱過程中可能被視為「錯別字」處理，但寫作測驗的評閱方式，並不會針對單一錯字扣分……然而，當簡體字影響閱讀理解時，文意的完整性亦可能受到影響，故考生應盡量避免書寫簡體字
+^
+轉知:各校辦理課後社團，應檢視授課教師之教材內容，避免有不符我國國情或使用簡體字之情形
+.
+Xin beishi tong rong guomin xiaoxue
+(in Chinese). Archived from
+the original
+on 25 May 2021.
+^
+Cheung, Yat-Shing (1992). "Language Variation, Culture, and Society". In Bolton, Kingsley (ed.).
+Sociolinguistics Today: International Perspectives
+. Routledge. pp.
+211
+.
+^
+Price, Fiona Swee-Lin (2007).
+Success with Asian Names: A Practical Guide for Business and Everyday Life
+. Nicholas Brealey.
+ISBN
+978-1-85788-378-7
+– via Google Books.
+^
+Chia Shih Yar (谢世涯).
+新加坡汉字规范的回顾与前瞻
+[
+Review and Prospect of Standardization of Chinese Characters in Singapore
+]. Paper presented at The Fourth International Conference on Chinese Characters. Convened by The Society of Chinese Philology, Jiangsu Educational Publishing House and State Language Commission of PRC. Suzhou, China. 26–27 Nov 1997 (in Chinese) – via huayuqiao.org.
+^
+For instance,
+"22.31.1.6.3"
+.
+Internal Revenue Manual
+. Internal Revenue Service. 6 November 2012.
+The standard language for translation is Traditional Chinese
+^
+"Noto CJK"
+.
+Google Noto Fonts
+.
+^
+"Internationalization Best Practices: Specifying Language in XHTML & HTML Content"
+. W3C
+. Retrieved
+27 May
+2009
+.
+^
+"IETF Language Subtag Registry"
+. 23 June 2025
+. Retrieved
+15 July
+2025
+.
+^
+Phaiboon, D. (2005).
+"Glossary of Aslian Languages: The Northern Aslian Languages of South Thailand"
+(PDF)
+.
+Mon-Khmer Studies
+.
+36
+:
+207–
+224.
+Archived
+(PDF)
+from the original on 6 January 2024 – via Southeast Asian Linguistics Archives.
+^
+Bishop, N. (1996).
+"Who's Who in Kensiw? Terms of Reference and Address in Kensiw"
+(PDF)
+.
+Mon-Khmer Studies
+.
+26
+:
+245–
+253. Archived from
+the original
+(PDF)
+on 19 July 2011
+. Retrieved
+12 December
+2010
+– via Southeast Asian Linguistics Archives.
+v
+t
+e
+Types
+of
+writing systems
+Overview
+History of writing
+Grapheme
+Lists
+Writing systems
+undeciphered
+inventors
+constructed
+Languages by writing system /
+by first written accounts
+Types
+Abjads
+Numerals
+Aramaic
+Hatran
+Arabic
+Elifba
+Egyptian hieroglyphs
+Elymaic
+Hebrew
+Ashuri
+Cursive
+Rashi
+Solitreo
+Tifinagh
+Mandaic
+Manichaean
+Nabataean
+Ancient North Arabian
+Pahlavi
+Book
+Inscriptional
+Inscriptional Parthian
+Psalter
+Pegon
+Phoenician
+Paleo-Hebrew
+Pitman shorthand
+Proto-Sinaitic
+Punic
+Samaritan
+South Arabian
+Zabur
+Musnad
+Sogdian
+Syriac
+ʾEsṭrangēlā
+Serṭā
+Maḏnḥāyā
+Teeline Shorthand
+Ugaritic
+Abugidas
+Brahmic
+Northern
+Bengali–Assamese
+Bhaiksuki
+Brahmi script
+Devanagari
+Dogri
+Gujarati
+Gupta
+Gurmukhi
+Kaithi
+Kalinga
+Khema
+Khojki
+Khudabadi
+Laṇḍā
+Lepcha
+Mahajani
+Marchen
+Meitei
+Modi
+Multani
+Nagari
+Nandinagari
+Nepalese scripts
+Bhujimol
+Golmol
+Himmol
+Kummol
+Kvemmol
+Pachumol
+Pracalit
+Ranjana
+Tamyig
+Tirhuta
+Limbu
+Litumol
+Odia
+Karani
+ʼPhags-pa
+Sharada
+Siddhaṃ
+Soyombo
+Sylheti Nagri
+Takri
+Tibetan
+Uchen
+Umê
+Tocharian
+Zanabazar square
+Southern
+Ahom
+Balinese
+Batak
+Baybayin
+Bhattiprolu
+Buda
+Buhid
+Chakma
+Cham
+Fakkham
+Grantha
+Goykanadi
+Hanunoo
+Javanese
+Kadamba
+Kannada
+Karen
+Kawi
+Khmer
+Khom Thai
+Kulitan
+Lanna
+Langdi
+Lao
+Leke
+Lontara
+Bilang-bilang
+Makasar
+Malayalam
+Old Maldivian
+Dhives Akuru
+Eveyla Akuru
+Mon–Burmese
+Pallava
+Pyu
+Saurashtra
+Shan
+Sinhala
+Sukhothai
+Sundanese
+Old Sundanese
+Tagbanwa
+Tai Le
+New Tai Lue
+Tai Noi
+Tai Tham
+Tai Viet
+Lai Tay
+Tamil
+Tamil-Brahmi
+Tanchangya
+Telugu
+Thai
+Tigalari
+Ulu scripts
+Incung
+Lampung
+Lembak
+Ogan
+Pasemah
+Rejang
+Serawai
+Vatteluttu
+Kolezhuthu
+Malayanma
+Others
+Bharati
+Boyd's syllabic shorthand
+Canadian syllabics
+Blackfoot
+Déné syllabics
+Dham
+Fox I
+Geʽez
+Gunjala Gondi
+Japanese Braille
+Sarati
+Jenticha
+Kharosthi
+Mandombe
+Masaram Gondi
+Meroitic
+Miao
+Mwangwego
+Pahawh Hmong
+Sorang Sompeng
+Tengwar
+Thaana
+Thomas Natural Shorthand
+Warang Citi
+Mwangwego
+Rma
+Alphabets
+Linear
+Adlam
+Ariyaka
+Armenian
+Avestan
+Pazend
+Avoiuli
+Bassa Vah
+Carian
+Caucasian Albanian
+Cirth
+Coelbren
+Coorgi–Cox alphabet
+Coptic
+Cyrillic
+Serbian
+Early
+Deseret
+Duployan shorthand
+Chinook
+Eclectic shorthand
+Elbasan
+Enochian
+Etruscan
+Formosan
+Fox II
+Fraser
+Gabelsberger shorthand
+Gadabuursi
+Garay alphabet
+Georgian
+Asomtavruli
+Nuskhuri
+Mkhedruli
+Veso Bey
+Glagolitic
+Gothic
+Gregg shorthand
+Greek
+(
+Archaic
+)
+Greco-Iberian alphabet
+Hangul
+Hanifi
+Sunuwar
+Kaddare
+Kayah Li
+Klingon
+Latin
+Beneventan
+Blackletter
+Carolingian minuscule
+Fraktur
+Gaelic
+Insular
+IPA
+Kurrent
+Merovingian
+Sigla
+Sütterlin
+Tironian notes
+Visigothic
+Luo
+Lycian
+Lydian
+Manchu
+Medefaidrin
+Molodtsov
+Mru
+Mundari Bani
+N'Ko
+Ogham
+Ol Chiki
+Old Hungarian
+Old Italic
+Old Permic
+Orkhon
+Old Uyghur
+Mongolian
+Evenki
+Galik alphabet
+Manchu
+Oirat
+Vagindra
+Ol Onal
+Osage
+Osmanya
+Pau Cin Hau
+Phrygian
+Pisidian
+Runic
+Anglo-Saxon
+Cipher
+Dalecarlian
+Elder Futhark
+Younger Futhark
+Gothic
+Marcomannic
+Medieval
+Staveless
+Shavian
+Sidetic
+Sorang Sompeng
+Sunuwar
+Tifinagh
+Todhri
+Tolong Siki
+Vellara
+Visible Speech
+Vithkuqi
+Wancho
+Warang Citi
+Yezidi
+Zaghawa
+Non-linear
+Braille
+Maritime flags
+Telegraph code
+New York Point
+Flag semaphore
+Moon type
+Ideograms
+Adinkra
+Aztec
+Blissymbols
+Dongba
+Ersu Shaba
+Emoji
+Isotype
+Kaidā
+Miꞌkmaw
+Mixtec
+New Epoch Notation Painting
+Nsibidi
+Anishinaabewibii'iganan
+Olmec
+Siglas poveiras
+Testerian
+Yerkish
+Zapotec
+Logograms
+Chinese family of scripts
+Chinese characters
+Simplified
+Traditional
+Oracle bone script
+Bronze scripts
+Seal script
+large
+small
+bird-worm
+Hanja
+Kanji
+Chữ Nôm
+Sawndip
+Bowen
+Chinese-influenced
+Jurchen
+Khitan large script
+Sui
+Tangut
+Cuneiform
+Akkadian
+Assyrian
+Elamite
+Hittite
+Luwian
+Sumerian
+Other logosyllabic
+Anatolian
+Bagam
+Cretan
+Isthmian
+Maya
+Proto-Elamite
+Tenevil
+Yi (Classical)
+Logoconsonantal
+Demotic
+Hieratic
+Hieroglyphs
+Numerals
+Hindu-Arabic
+Abjad
+Attic (Greek)
+Muisca
+Roman
+Other
+Sitelen Pona
+Semi-syllabaries
+Full
+Linear Elamite
+Celtiberian
+Iberian
+Northeastern
+Southeastern
+Khom
+Dunging
+Redundant
+Espanca script
+Pahawh Hmong
+Khitan small script
+Southwest Paleohispanic
+Bopomofo
+Quốc Âm Tân Tự
+Sign languages
+ASLwrite
+SignWriting
+si5s
+Stokoe notation
+Syllabaries
+Afaka
+Bamum
+Bété
+Byblos
+Canadian Aboriginal
+Cherokee
+Cypriot
+Cypro-Minoan
+Ditema tsa Dinoko
+Eskayan
+Geba
+Great Lakes Algonquian
+Iban
+Idu
+Kana
+Hiragana
+Katakana
+Man'yōgana
+Hentaigana
+Sōgana
+Jindai moji
+Kikakui
+Kpelle
+Linear B
+Linear Elamite
+Lisu
+Loma
+Nüshu
+Nwagu Aneke script
+Old Persian cuneiform
+Sumerian
+Vai
+Woleai
+Yi
+Yugtun
+v
+t
+e
+Braille
+⠃⠗⠁⠊⠇⠇⠑
+Braille cell
+1829 braille
+International uniformity
+ASCII braille
+Unicode braille patterns
+Braille scripts
+French-ordered
+Albanian
+Azerbaijani
+Cantonese
+Catalan
+Chinese (mainland Mandarin)
+(largely reassigned)
+Czech
+Dutch
+English
+(
+Unified English
+)
+Esperanto
+French
+German
+Ghanaian
+Guarani
+Hawaiian
+Hungarian
+Iñupiaq
+IPA
+Irish
+Italian
+Latvian
+Lithuanian
+Luxembourgish
+(extended to 8-dot)
+Maltese
+Māori
+Navajo
+Nigerian
+Philippine
+Polish
+Portuguese
+Romanian
+Samoan
+Slovak
+South African
+Spanish
+Taiwanese Mandarin
+(largely reassigned)
+Turkish
+Vietnamese
+Welsh
+Yugoslav
+Zambian
+Nordic family
+Estonian
+Faroese
+Icelandic
+Scandinavian
+Danish
+Finnish
+Greenlandic
+Northern Sámi
+Norwegian
+Swedish
+Russian lineage family
+i.e.
+Cyrillic
+-mediated scripts
+Belarusian
+Bulgarian
+Kazakh
+Kyrgyz
+Mongolian
+Russian
+Tatar
+Ukrainian
+Egyptian lineage family
+i.e.
+Arabic
+-mediated scripts
+Arabic
+Persian
+Urdu
+(Pakistan)
+Indian lineage family
+i.e.
+Bharati Braille
+Devanagari (Hindi / Marathi / Nepali)
+Bengali (Bangla / Assamese)
+Gujarati
+Kannada
+Malayalam
+Odia
+Punjabi
+Sinhala
+Tamil
+Telugu
+Urdu
+(India)
+Other scripts
+Amharic
+Armenian
+Burmese
+Dzongkha
+(Bhutanese)
+Georgian
+Greek
+Hebrew
+Inuktitut
+(reassigned vowels)
+Khmer
+Thai and Lao
+(Japanese vowels)
+Tibetan
+Reordered
+Algerian Braille
+(obsolete)
+Frequency-based
+American Braille
+(obsolete)
+Independent
+Chinese semi-syllabaries
+Cantonese
+Mainland Chinese Mandarin
+Taiwanese Mandarin
+Two-cell Chinese (Shuangpin)
+Japanese
+Korean
+Eight-dot
+Luxembourgish
+Kanji
+Gardner–Salinas braille codes
+(GS8)
+Symbols in braille
+Braille music
+Canadian currency marks
+Computer Braille Code
+Gardner–Salinas braille codes
+(science; GS8/GS6)
+International Phonetic Alphabet (IPA)
+Nemeth braille code
+Braille technology
+Braille e-book
+Braille embosser
+Braille translator
+Braille watch
+Mountbatten Brailler
+Optical braille recognition
+Perforation
+Perkins Brailler
+Refreshable braille display
+Slate and stylus
+Braigo
+People
+Louis Braille
+Charles Barbier
+Róża Czacka
+Valentin Haüy
+Harris Mowbray
+Thakur Vishva Narain Singh
+Sabriye Tenberken
+William Bell Wait
+Organisations
+Braille Institute of America
+Braille Without Borders
+Japan Braille Library
+National Braille Association
+Blindness organizations
+Schools for the blind
+American Printing House for the Blind
+Other
+tactile alphabets
+Decapoint
+Moon type
+New York Point
+Night writing
+Vibratese
+Related topics
+Accessible publishing
+Braille literacy
+RoboBraille
+v
+t
+e
+Chinese language
+Sinitic languages
+Major linguistic groups
+Mandarin
+Northeastern
+Changchun
+Harbin
+Shenyang
+Taz
+Beijing
+Beijing
+Taiwan
+Jilu
+Tianjin
+Jinan
+Jiaoliao
+Dalian
+Qingdao
+Weihai
+Central Plains
+Dongping
+Gangou
+Guanzhong
+Xi'an
+Luoyang
+Xuzhou
+Dungan
+Xinjiang
+Southwestern
+Sichuanese
+Chengdu–Chongqing
+(?)
+Minjiang
+Leshan
+Renshou–Fushun
+[
+zh
+]
+Zigong
+Kunming
+Nanping
+Wuhan
+Gui–Liu
+Wuming
+Jianghuai
+Nanjing
+Nantong
+Nanping
+Lanyin
+Lanzhou dialect
+[
+zh
+]
+Ürümqi dialect
+[
+zh
+]
+Xinjiang
+Other
+Junjiahua
+Qinjiang
+Gyami
+Jin
+Zhangjiakou–Hohhot
+Zhi–Yan
+Wu
+Taihu
+Shanghai
+Suzhou
+Wuxi
+Changzhou
+(?)
+Hangzhou
+Shaoxing
+Ningbo
+Jinxiang
+Jiangyin
+Shadi
+Taizhou Wu
+Taizhou
+Tiantai
+Oujiang
+Wenzhou
+Rui'an
+Wencheng
+Wuzhou
+Jinhua
+Chu–Qu
+Quzhou
+Jiangshan
+Qingtian
+Xuanzhou
+Xuancheng
+Huizhou
+Ji-She
+[
+zh
+]
+Xiu-Yi
+[
+zh
+]
+Qi-De
+[
+zh
+]
+Yanzhou
+[
+zh
+]
+Jing-Zhan
+[
+zh
+]
+Gan
+Chang–Du
+Nanchang
+Yi–Liu
+Ying–Yi
+Da–Tong
+Xiang
+Changyi
+Changsha
+Loushao
+Shuangfeng
+Xiangxiang
+Wugang
+Ji–Xu
+Yong–Quan
+Qiyang
+Min
+Eastern
+Houguan
+[
+zh
+]
+Fuzhou
+Fuqing
+Changle
+Gutian
+Matsu
+Fu–Ning
+[
+zh
+]
+Ningde
+Fu'an
+Other
+Manjiang
+Zhongshan
+Longdu
+Nanlang
+Pu–Xian
+Putian
+Xianyou
+Southern
+Hokkien
+Quanzhou
+Zhangzhou
+Amoy
+Chawan
+Taiwan
+Philippines
+Penang
+Medan
+Singapore
+Southern Malaysia
+Teochew
+Swatow
+Haklau
+Pontianak
+Zhongshan
+Sanxiang
+Other
+Zhenan
+Longyan
+Leizhou
+Zhanjiang
+Hainan
+Wenchang
+Haikou
+Banqiao
+Inland
+Northern
+Jian'ou
+Jianyang
+Central
+Shao–Jiang
+Hakka
+Huiyang
+[
+zh
+]
+Changting
+Meixian
+Pontianak
+Singkawang
+Taiwan
+Sixian
+Hailu
+Raoping
+Tingzhou
+Wuhua
+Yue
+Yuehai
+Guangzhou
+Hong Kong
+Malaysia
+Xiguan
+Jiujiang
+Shiqi
+Weitou
+Dapeng
+Yunfu
+Siyi
+Taishan
+Xinhui
+[
+zh
+]
+Other
+Gao–Yang
+Goulou
+Wu–Hua
+Yong–Xun
+Luo–Guang
+Qin–Lian
+Pinghua
+Northern Pinghua
+Tongdao
+Younian
+Southern Pinghua
+Yongjiang
+Guandao
+Rongjiang
+Unclassified
+Shaozhou Tuhua
+Xiangnan Tuhua
+Danzhou
+Badong Yao
+Shehua
+Waxiang
+Yeheni
+Huizhou
+Mai
+Laobeizi
+(?)
+Macro-Bai
+Bai
+Cai-Long
+Caijia
+Longjia
+Luren
+Standard forms of Chinese
+Mandarin
+(
+Standard Chinese
+)
+Sichuanese
+Taiwanese
+Philippine
+Malaysian
+Singaporean
+Other varieties
+Cantonese
+Hokkien
+Hakka
+History, phonology, and grammar
+History
+Old Chinese
+Eastern Han
+Middle Chinese
+Old Mandarin
+Middle Mandarin
+Proto-Min
+Proto-Hakka
+Ba–Shu
+Gan
+Phonology
+Historical
+Old
+Old National
+Cantonese
+Hokkien
+Northern Wu
+Mandarin
+Literary and colloquial readings
+Grammar
+Numerals
+Classifiers
+Honorifics
+Cantonese grammar
+Classical grammar
+Idioms
+Chengyu
+Xiehouyu
+Written Chinese and input methods
+Literary forms
+Official
+Classical
+Adoption
+in Japan
+in Vietnam
+Vernacular
+Written Cantonese
+Written Dungan
+Written Hokkien
+Written Sichuanese
+Scripts
+Logographic
+Script styles
+Oracle bone
+Bronze
+Seal
+Clerical
+Semi-cursive
+Cursive
+Chinese characters
+Simplified
+Traditional
+Punctuation
+Braille
+Cantonese
+Mainland Chinese
+Taiwanese
+Two-cell
+Phonetic
+Romanization
+Gwoyeu Romatzyh
+Hanyu Pinyin
+MPS II
+Postal
+Tongyong Pinyin
+Wade–Giles
+EFEO
+Lessing-Othmer
+Yale
+Cyrillization
+Dungan Cyrillic
+Bopomofo
+Cantonese Bopomofo
+Taiwanese Phonetic Symbols
+Taiwanese kana
+Taiwanese Hangul
+Xiao'erjing
+Nüshu
+Input methods
+Logographic
+Biaoxingma
+Boshiamy
+[
+zh
+]
+Cangjie
+Simplified
+CKC
+Dayi
+Stroke count
+Wubi (Wang Ma)
+ZhengMa
+Q9
+Pinyin
+Google
+Microsoft
+Sogou
+List of varieties of Chinese
+Portals
+:
+Language
+Taiwan
+Hong Kong
+Retrieved from "
+https://en.wikipedia.org/w/index.php?title=Traditional_Chinese_characters&oldid=1306155290
+"
+Categories
+:
+Chinese characters
+Chinese language reform
+Hidden categories:
+CS1 uses Chinese-language script (zh)
+CS1 Chinese-language sources (zh)
+Articles with short description
+Short description is different from Wikidata
+Use American English from May 2020
+All Wikipedia articles written in American English
+Use dmy dates from April 2022
+Scripts with ISO 15924 four-letter codes
+Articles containing Chinese-language text
+Pages with plain IPA
+Articles containing traditional Chinese-language text
+Articles containing simplified Chinese-language text
+Articles needing expert attention from September 2023
+All articles needing expert attention
+China articles needing expert attention
+All articles with unsourced statements
+Articles with unsourced statements from April 2015
+Articles with unsourced statements from June 2007
+This page was last edited on 16 August 2025, at 07:03
+(UTC)
+.
+Text is available under the
+Creative Commons Attribution-ShareAlike 4.0 License
+;
+additional terms may apply. By using this site, you agree to the
+Terms of Use
+and
+Privacy Policy
+. Wikipedia® is a registered trademark of the
+Wikimedia Foundation, Inc.
+, a non-profit organization.
+Privacy policy
+About Wikipedia
+Disclaimers
+Contact Wikipedia
+Code of Conduct
+Developers
+Statistics
+Cookie statement
+Mobile view
+Search
+Search
+Toggle the table of contents
+Traditional Chinese characters
+72 languages
+Add topic

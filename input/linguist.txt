@@ -1,0 +1,448 @@
+Theoretical linguistics - Wikipedia
+Jump to content
+Main menu
+Main menu
+move to sidebar
+hide
+Navigation
+Main page
+Contents
+Current events
+Random article
+About Wikipedia
+Contact us
+Contribute
+Help
+Learn to edit
+Community portal
+Recent changes
+Upload file
+Special pages
+Search
+Search
+Appearance
+Donate
+Create account
+Log in
+Personal tools
+Donate
+Create account
+Log in
+Pages for logged out editors
+learn more
+Contributions
+Talk
+Contents
+move to sidebar
+hide
+(Top)
+1
+Fields of linguistics proper
+2
+Linguistic theories
+3
+See also
+4
+References
+Toggle the table of contents
+Theoretical linguistics
+29 languages
+العربية
+বাংলা
+Български
+Čeština
+Deutsch
+Ελληνικά
+Español
+فارسی
+Français
+Gaelg
+Galego
+한국어
+Հայերեն
+Ido
+Bahasa Indonesia
+मराठी
+Bahasa Melayu
+閩東語 / Mìng-dĕ̤ng-ngṳ̄
+Nederlands
+日本語
+Norsk bokmål
+Română
+Русский
+Shqip
+Simple English
+தமிழ்
+Українська
+粵語
+中文
+Edit links
+Article
+Talk
+English
+Read
+Edit
+View history
+Tools
+Tools
+move to sidebar
+hide
+Actions
+Read
+Edit
+View history
+General
+What links here
+Related changes
+Upload file
+Permanent link
+Page information
+Cite this page
+Get shortened URL
+Download QR code
+Print/export
+Download as PDF
+Printable version
+In other projects
+Wikimedia Commons
+Wikidata item
+Appearance
+move to sidebar
+hide
+From Wikipedia, the free encyclopedia
+Branch of linguistics which inquires into the nature of language
+Part of
+a series
+on
+Linguistics
+Outline
+History
+Index
+General linguistics
+Diachronic
+Lexicography
+Morphology
+Phonology
+Pragmatics
+Semantics
+Syntax
+Syntax–semantics interface
+Typology
+Applied linguistics
+Acquisition
+Anthropological
+Applied
+Mathematical
+Computational
+Conversation analysis
+Corpus linguistics
+Discourse analysis
+Determinism
+Distance
+Documentation
+Ethnography of communication
+Ethnomethodology
+Forensic
+History of linguistics
+Interlinguistics
+Neurolinguistics
+Philology
+Philosophy of language
+Phonetics
+Psycholinguistics
+Sociolinguistics
+Text
+Translating
+and
+interpreting
+Writing systems
+Theoretical frameworks
+Formalist
+Constituency
+Dependency
+Distributionalism
+Generative
+Glossematics
+Functional
+Cognitive
+Construction grammar
+Functional discourse grammar
+Grammaticalization
+Interactional linguistics
+Prague circle
+Systemic functional
+Usage-based
+Structuralism
+Topics
+Autonomy of syntax
+Compositionality
+Conservative and innovative language
+Descriptivism
+Etymology
+Iconicity
+Internet linguistics
+LGBTQ linguistics
+Origin of language
+Orismology
+Orthography
+Philosophy of linguistics
+Prescriptivism
+Second-language acquisition
+Theory of language
+Terminology
+Portal
+v
+t
+e
+Theoretical linguistics
+is a term in
+linguistics
+that,
+[
+1
+]
+like the related term
+general linguistics
+,
+[
+2
+]
+can be understood in different ways. Both can be taken as a reference to the
+theory of language
+, or the branch of
+linguistics
+that inquires into the
+nature of language
+and seeks to answer fundamental questions as to what language is, or what the common ground of all languages is.
+[
+2
+]
+The goal of theoretical linguistics can also be the construction of a general theoretical framework for the description of language.
+[
+1
+]
+Another use of the term depends on the organisation of linguistics into different sub-fields. The term 'theoretical linguistics' is commonly juxtaposed with
+applied linguistics
+.
+[
+3
+]
+This perspective implies that the aspiring language professional, e.g. a student, must first learn the
+theory
+i.e. properties of the linguistic system, or what
+Ferdinand de Saussure
+called
+internal linguistics
+.
+[
+4
+]
+This is followed by
+practice,
+or studies in the applied field. The dichotomy is not fully unproblematic because
+language pedagogy
+,
+language technology
+and other aspects of applied linguistics also include theory.
+[
+3
+]
+Similarly, the term general linguistics is used to distinguish core
+linguistics
+from other types of study. However, because college and university linguistics is largely distributed with the institutes and departments of a relatively small number of
+national languages
+, some larger universities also offer courses and research programmes in 'general linguistics' which may cover exotic and
+minority languages
+,
+cross-linguistic studies
+and various other topics outside the scope of the main
+philological
+departments.
+[
+5
+]
+Fields of linguistics proper
+[
+edit
+]
+When the concept of theoretical linguistics is taken to refer to
+core
+or
+internal linguistics
+, it means the study of the parts of the language system. This traditionally means
+phonology
+,
+morphology
+,
+syntax
+and
+semantics
+.
+Pragmatics
+and
+discourse
+can also be included; delimitation varies between institutions. Furthermore, Saussure's definition of general linguistics consists of the dichotomy of
+synchronic and diachronic linguistics
+, thus including
+historical linguistics
+as a core issue.
+[
+4
+]
+Linguistic theories
+[
+edit
+]
+See also:
+Theory of language
+There are various frameworks of linguistic theory which include a general theory of language and a general theory of
+linguistic description
+.
+[
+6
+]
+Current humanistic approaches include theories within
+structural linguistics
+and
+functional linguistics
+. In addition to the humanistic approaches of structural linguistics and functional linguistics, the field of theoretical linguistics encompasses other frameworks and perspectives.
+Evolutionary linguistics
+is one such framework that investigates the origins and development of language from an evolutionary and cognitive perspective. It incorporates various models within
+generative grammar
+, which seeks to explain language structure through formal rules and transformations.
+Cognitive linguistics
+and
+cognitive approaches to grammar
+, on the other hand, focuses on the relationship between language and cognition, exploring how language reflects and influences our thought processes.
+[
+6
+]
+See also
+[
+edit
+]
+Theoretical Linguistics
+– journal
+Course in General Linguistics
+References
+[
+edit
+]
+^
+a
+b
+Hamp, Eric P.; Ivić, Pavle; Lyons, John (2020).
+Linguistics
+. Encyclopædia Britannica, inc.
+ISBN
+9783110289770
+. Retrieved
+2020-08-03
+.
+^
+a
+b
+Graffi, Giorgio (2009). "20th century linguistics: overview of trends".
+Concise Encyclopedia of Philosophy of Language and Linguistics
+. Elsevier. pp.
+780–
+794.
+ISBN
+9780080965017
+.
+^
+a
+b
+Harris, Tony (2001).
+"Linguistics in applied linguistics: a historical overview"
+.
+Journal of English Studies
+.
+3
+(2):
+99–
+114.
+doi
+:
+10.18172/jes.72
+. Retrieved
+2020-08-03
+.
+^
+a
+b
+de Saussure, Ferdinand
+(1959) [First published 1916].
+Course in General Linguistics
+(PDF)
+. New York: Philosophy Library.
+ISBN
+9780231157278
+. Archived from
+the original
+(PDF)
+on 2019-08-08
+. Retrieved
+2020-08-03
+.
+{{
+cite book
+}}
+:
+ISBN / Date incompatibility (
+help
+)
+^
+"General linguistics"
+. University of Helsinki. 2020
+. Retrieved
+2020-08-03
+.
+^
+a
+b
+Linguistic Theory
+ScienceDirect. Retrieved 19 May 2023.
+Portals
+:
+Language
+Linguistics
+Retrieved from "
+https://en.wikipedia.org/w/index.php?title=Theoretical_linguistics&oldid=1282186132
+"
+Categories
+:
+Formal sciences
+Linguistics
+Hidden categories:
+CS1 errors: ISBN date
+Articles with short description
+Short description matches Wikidata
+This page was last edited on 24 March 2025, at 21:48
+(UTC)
+.
+Text is available under the
+Creative Commons Attribution-ShareAlike 4.0 License
+;
+additional terms may apply. By using this site, you agree to the
+Terms of Use
+and
+Privacy Policy
+. Wikipedia® is a registered trademark of the
+Wikimedia Foundation, Inc.
+, a non-profit organization.
+Privacy policy
+About Wikipedia
+Disclaimers
+Contact Wikipedia
+Code of Conduct
+Developers
+Statistics
+Cookie statement
+Mobile view
+Search
+Search
+Toggle the table of contents
+Theoretical linguistics
+29 languages
+Add topic

@@ -1,0 +1,403 @@
+Andrew West (linguist) - Wikipedia
+Jump to content
+Main menu
+Main menu
+move to sidebar
+hide
+Navigation
+Main page
+Contents
+Current events
+Random article
+About Wikipedia
+Contact us
+Contribute
+Help
+Learn to edit
+Community portal
+Recent changes
+Upload file
+Special pages
+Search
+Search
+Appearance
+Donate
+Create account
+Log in
+Personal tools
+Donate
+Create account
+Log in
+Pages for logged out editors
+learn more
+Contributions
+Talk
+Contents
+move to sidebar
+hide
+(Top)
+1
+Software
+2
+Works
+3
+References
+4
+External links
+Toggle the table of contents
+Andrew West (linguist)
+3 languages
+العربية
+Volapük
+中文
+Edit links
+Article
+Talk
+English
+Read
+Edit
+View history
+Tools
+Tools
+move to sidebar
+hide
+Actions
+Read
+Edit
+View history
+General
+What links here
+Related changes
+Upload file
+Permanent link
+Page information
+Cite this page
+Get shortened URL
+Download QR code
+Print/export
+Download as PDF
+Printable version
+In other projects
+Wikimedia Commons
+Wikidata item
+Appearance
+move to sidebar
+hide
+From Wikipedia, the free encyclopedia
+British sinologist (1960–2025)
+Andrew West
+West in 2013
+Born
+Andrew Christopher West
+(
+1960-03-31
+)
+31 March 1960
+Died
+10 July 2025
+(2025-07-10)
+(aged 65)
+Nationality
+British
+Academic background
+Education
+Bishop Vesey's Grammar School
+School of Oriental and African Studies
+(B.A.)
+Princeton University
+(Ph.D.)
+Thesis
+Quest of the Urtext: The Textual Archaeology of 'The Three Kingdoms'
+(1993)
+Doctoral advisor
+Andrew H. Plaks
+Academic work
+Discipline
+Sinology
+Institutions
+Yale University
+Chinese name
+Chinese
+魏安
+Transcriptions
+Standard Mandarin
+Hanyu Pinyin
+Wèi Ān
+IPA
+[wêɪ án]
+Website
+www
+.babelstone
+.co
+.uk
+Andrew Christopher West
+(
+Chinese
+:
+魏安
+;
+pinyin
+:
+Wèi Ān
+; 31
+March 1960 – 10
+July 2025) was an English
+Sinologist
+. His first works concerned
+Chinese novels
+of the
+Ming
+and
+Qing
+dynasties.  His study of
+Romance of the Three Kingdoms
+used a new approach to analyse the relationship among the various versions, extrapolating the original text of that novel.
+[
+1
+]
+[
+2
+]
+West compiled a catalogue for the Chinese-language library of the English
+missionary
+Robert Morrison
+containing 893 books representing in total some 10,000
+string-bound fascicules.
+[
+3
+]
+[
+4
+]
+His subsequent work was in the
+minority languages of China
+, especially
+Khitan
+,
+Manchu
+, and
+Mongolian
+. He proposed an encoding scheme for the
+'Phags-pa script
+,
+[
+5
+]
+which was subsequently included in
+Unicode
+version 5.0.
+West also worked to encode gaming symbols and phonetic characters to the UCS, and worked on encodings for
+Tangut
+and
+Jurchen
+. He died on 10 July 2025, aged 65.
+[
+6
+]
+Software
+[
+edit
+]
+West was the developer of a number of software products and fonts for
+Microsoft Windows
+, including BabelPad and BabelMap.
+BabelPad is a Unicode text editor with various tools for entering characters and performing text conversions such as
+normalization
+and
+Unicode casing
+.
+[
+7
+]
+BabelPad also supports a wide range of encodings, and has input methods for entering Chinese,
+Mongolian
+,
+Manchu
+,
+Tibetan
+,
+Uyghur
+and
+Yi
+text, as well as for entering individual Unicode characters by their hexadecimal code point value.
+[
+8
+]
+BabelMap is a Unicode character map application that supports all Unicode blocks and characters, and includes various utilities such as
+pinyin
+and
+radical
+lookup tools for entering
+Chinese characters
+.
+[
+9
+]
+Works
+[
+edit
+]
+1996.
+Sānguó yǎnyì bǎnběn kǎo
+三國演義版本考 [A study of the editions of
+Romance of the Three Kingdoms
+]. Shanghai: Shanghai Classics Publishing House.
+ISBN
+7-5325-2023-4
+1998.
+Catalogue of the Morrison Collection of Chinese Books
+(馬禮遜藏書書目). London:
+SOAS
+.
+ISBN
+0-7286-0292-X
+2012. "Musical Notation for Flute in Tangut Manuscripts". In
+Irina Fedorovna Popova
+(ed.),
+Тангуты в Центральной Азии: сборник статей в честь 80-летия проф. Е.И.Кычанова
+[Tanguts in Central Asia: a collection of articles marking the 80th anniversary of Prof.
+E. I. Kychanov
+] pp. 443–453. Moscow: Oriental Literature.
+ISBN
+978-5-02-036505-6
+2016.
+Gerard Clauson's Skeleton Tangut (Hsi Hsia) Dictionary: A facsimile edition
+. With an introduction by
+Imre Galambos
+. With Editorial notes and an Index by Andrew West. Prepared for publication by
+Michael Everson
+. Portlaoise: Evertype.
+ISBN
+978-1-78201-167-5
+.
+References
+[
+edit
+]
+^
+Kimberly Ann Besio and Constantine Tung,
+Three Kingdoms and Chinese Culture
+(SUNY Press, 2007) p.163
+^
+Charles Horner,
+Rising China and its Postmodern Fate
+(University of Georgia Press, 2009) pp.94–95
+^
+Beatrice S. Bartlett, Review in
+China Review International
+vol.6 no.2 (Fall 1999) pp.553–554
+^
+T. H. Barrett, Review in
+Bulletin of the School of Oriental and African Studies
+vol.62 Issue 2 (1999)
+^
+West, Andrew (18 September 2003).
+"Proposal to encode the Phags-pa script"
+(PDF)
+. Archived from
+the original
+(PDF)
+on 8 October 2022
+. Retrieved
+18 July
+2025
+.
+^
+Family of Andrew West (30 July 2025).
+"It is with great sadness and a heavy heart that we, the family of Andrew West, confirm his peaceful passing on 10th July 2025. The BabelStone legacy will be continued by colleagues and friends"
+.
+Bluesky
+.
+Archived
+from the original on 30 July 2025.
+^
+Jukka K. Korpela,
+Unicode Explained
+(O'Reilly, 2006) pp.114–115
+^
+Ken Lunde
+,
+CJKV Information Processing
+(O'Reilly, 2008) p.645
+^
+Yannis Haralambous and P. Scott Horne,
+Fonts & Encodings
+(O'Reilly, 2007) pp.161–163
+External links
+[
+edit
+]
+Wikimedia Commons has media related to
+Andrew West (linguist)
+.
+Official website
+Portals
+:
+Biography
+China
+Linguistics
+Software
+United Kingdom
+Authority control databases
+International
+ISNI
+VIAF
+WorldCat
+National
+Germany
+United States
+France
+BnF data
+Netherlands
+Academics
+CiNii
+ORCID
+Other
+Yale LUX
+Retrieved from "
+https://en.wikipedia.org/w/index.php?title=Andrew_West_(linguist)&oldid=1303421929
+"
+Categories
+:
+1960 births
+2025 deaths
+British sinologists
+People educated at Bishop Vesey's Grammar School
+People involved with Unicode
+Tangutologists
+Wikipedia people
+Hidden categories:
+Articles with short description
+Short description is different from Wikidata
+Use dmy dates from February 2020
+Use British English from February 2020
+Articles containing Chinese-language text
+Articles with hCards
+This page was last edited on 30 July 2025, at 22:44
+(UTC)
+.
+Text is available under the
+Creative Commons Attribution-ShareAlike 4.0 License
+;
+additional terms may apply. By using this site, you agree to the
+Terms of Use
+and
+Privacy Policy
+. Wikipedia® is a registered trademark of the
+Wikimedia Foundation, Inc.
+, a non-profit organization.
+Privacy policy
+About Wikipedia
+Disclaimers
+Contact Wikipedia
+Code of Conduct
+Developers
+Statistics
+Cookie statement
+Mobile view
+Search
+Search
+Toggle the table of contents
+Andrew West (linguist)
+3 languages
+Add topic

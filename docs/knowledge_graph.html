@@ -1,0 +1,399 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>汉学家知识图谱 - 学者关系网络可视化</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://d3js.org/d3.v7.min.js"></script>
+    <style>
+        .node {
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+        .node:hover {
+            filter: brightness(1.2);
+        }
+        .link {
+            fill: none;
+            stroke-opacity: 0.6;
+            transition: all 0.3s ease;
+        }
+        .link:hover {
+            stroke-opacity: 1;
+            stroke-width: 3px;
+        }
+        .tooltip {
+            position: absolute;
+            padding: 10px;
+            background: rgba(0, 0, 0, 0.9);
+            color: white;
+            border-radius: 5px;
+            pointer-events: none;
+            font-size: 12px;
+            z-index: 1000;
+            max-width: 300px;
+        }
+        .gradient-text {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+        .control-panel {
+            position: fixed;
+            right: 20px;
+            top: 100px;
+            background: white;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            z-index: 100;
+        }
+        #graph-container {
+            position: relative;
+            background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+            border-radius: 10px;
+            overflow: hidden;
+        }
+    </style>
+</head>
+<body class="bg-gradient-to-br from-purple-50 via-pink-50 to-blue-50 min-h-screen">
+    
+    <!-- 导航栏 -->
+    <nav class="sticky top-0 z-50 bg-white/90 backdrop-blur-md shadow-lg">
+        <div class="container mx-auto px-4 py-4">
+            <div class="flex justify-between items-center">
+                <h1 class="text-3xl font-bold gradient-text">汉学家知识图谱</h1>
+                <div class="flex space-x-6">
+                    <a href="index.html" class="text-gray-700 hover:text-purple-600 transition-colors">返回主页</a>
+                    <a href="people.html" class="text-gray-700 hover:text-purple-600 transition-colors">学者列表</a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- 主容器 -->
+    <div class="container mx-auto px-4 py-8">
+        
+        <!-- 标题和说明 -->
+        <div class="text-center mb-8">
+            <h2 class="text-4xl font-bold mb-4 gradient-text">学者关系网络</h2>
+            <p class="text-gray-600 max-w-2xl mx-auto">
+                探索汉学家之间的潜在联系，基于研究领域、时代重叠等因素构建的关系网络图
+            </p>
+        </div>
+
+        <!-- 统计信息 -->
+        <div class="grid grid-cols-1 md:grid-cols-4 gap-4 mb-8">
+            <div class="bg-white rounded-lg shadow-md p-4 text-center">
+                <div class="text-3xl font-bold text-purple-600" id="total-scholars">0</div>
+                <div class="text-gray-600 text-sm">学者总数</div>
+            </div>
+            <div class="bg-white rounded-lg shadow-md p-4 text-center">
+                <div class="text-3xl font-bold text-blue-600" id="total-relations">0</div>
+                <div class="text-gray-600 text-sm">关系连接</div>
+            </div>
+            <div class="bg-white rounded-lg shadow-md p-4 text-center">
+                <div class="text-3xl font-bold text-green-600" id="total-fields">0</div>
+                <div class="text-gray-600 text-sm">研究领域</div>
+            </div>
+            <div class="bg-white rounded-lg shadow-md p-4 text-center">
+                <div class="text-3xl font-bold text-red-600" id="total-nationalities">0</div>
+                <div class="text-gray-600 text-sm">国籍分布</div>
+            </div>
+        </div>
+
+        <!-- 图谱容器 -->
+        <div id="graph-container" class="w-full h-[600px] relative">
+            <svg id="graph-svg" width="100%" height="100%"></svg>
+            <div class="tooltip" style="display: none;"></div>
+        </div>
+
+        <!-- 控制面板 -->
+        <div class="control-panel">
+            <h3 class="font-bold mb-4">控制选项</h3>
+            
+            <div class="mb-4">
+                <label class="block text-sm font-medium text-gray-700 mb-2">节点大小</label>
+                <input type="range" id="node-size" min="5" max="20" value="10" class="w-full">
+            </div>
+            
+            <div class="mb-4">
+                <label class="block text-sm font-medium text-gray-700 mb-2">连接强度</label>
+                <input type="range" id="link-strength" min="0" max="100" value="50" class="w-full">
+            </div>
+            
+            <div class="mb-4">
+                <label class="block text-sm font-medium text-gray-700 mb-2">按领域筛选</label>
+                <select id="field-filter" class="w-full p-2 border rounded">
+                    <option value="all">全部</option>
+                </select>
+            </div>
+            
+            <button id="reset-view" class="w-full bg-purple-600 text-white py-2 rounded hover:bg-purple-700 transition">
+                重置视图
+            </button>
+        </div>
+
+        <!-- 图例 -->
+        <div class="mt-8 bg-white rounded-lg shadow-md p-6">
+            <h3 class="font-bold mb-4">图例说明</h3>
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-4">
+                <div class="flex items-center">
+                    <div class="w-4 h-4 rounded-full bg-blue-500 mr-2"></div>
+                    <span class="text-sm">历史学者</span>
+                </div>
+                <div class="flex items-center">
+                    <div class="w-4 h-4 rounded-full bg-green-500 mr-2"></div>
+                    <span class="text-sm">哲学学者</span>
+                </div>
+                <div class="flex items-center">
+                    <div class="w-4 h-4 rounded-full bg-purple-500 mr-2"></div>
+                    <span class="text-sm">文学学者</span>
+                </div>
+                <div class="flex items-center">
+                    <div class="w-4 h-4 rounded-full bg-red-500 mr-2"></div>
+                    <span class="text-sm">语言学者</span>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // 知识图谱可视化脚本
+        let graphData = null;
+        let simulation = null;
+        
+        // 颜色映射
+        const fieldColors = {
+            '历史': '#3B82F6',
+            '哲学': '#10B981',
+            '文学': '#8B5CF6',
+            '语言学': '#EF4444',
+            '考古学': '#F59E0B',
+            '宗教': '#EC4899',
+            '艺术': '#14B8A6',
+            '人类学': '#6366F1'
+        };
+        
+        // 加载知识图谱数据
+        async function loadGraphData() {
+            try {
+                const response = await fetch('knowledge_graph.json');
+                graphData = await response.json();
+                
+                // 更新统计信息
+                document.getElementById('total-scholars').textContent = graphData.metadata.total_scholars;
+                document.getElementById('total-relations').textContent = graphData.metadata.total_relationships;
+                document.getElementById('total-fields').textContent = graphData.metadata.fields.length;
+                document.getElementById('total-nationalities').textContent = graphData.metadata.nationalities.length;
+                
+                // 更新筛选器
+                const fieldFilter = document.getElementById('field-filter');
+                graphData.metadata.fields.forEach(field => {
+                    const option = document.createElement('option');
+                    option.value = field;
+                    option.textContent = field;
+                    fieldFilter.appendChild(option);
+                });
+                
+                // 渲染图谱
+                renderGraph();
+            } catch (error) {
+                console.error('加载数据失败:', error);
+                // 使用示例数据
+                graphData = generateSampleData();
+                renderGraph();
+            }
+        }
+        
+        // 生成示例数据
+        function generateSampleData() {
+            return {
+                nodes: [
+                    {id: 'Joseph Needham', name: 'Joseph Needham', field: '历史', nationality: '英国'},
+                    {id: 'James Legge', name: 'James Legge', field: '哲学', nationality: '英国'},
+                    {id: 'Arthur Waley', name: 'Arthur Waley', field: '文学', nationality: '英国'},
+                    {id: 'Herbert Giles', name: 'Herbert Giles', field: '语言学', nationality: '英国'},
+                    {id: 'Bernhard Karlgren', name: 'Bernhard Karlgren', field: '语言学', nationality: '瑞典'}
+                ],
+                edges: [
+                    {source: 'Joseph Needham', target: 'James Legge', type: 'collaboration'},
+                    {source: 'Arthur Waley', target: 'Herbert Giles', type: 'collaboration'},
+                    {source: 'Herbert Giles', target: 'Bernhard Karlgren', type: 'influence'}
+                ],
+                metadata: {
+                    total_scholars: 5,
+                    total_relationships: 3,
+                    fields: ['历史', '哲学', '文学', '语言学'],
+                    nationalities: ['英国', '瑞典']
+                }
+            };
+        }
+        
+        // 渲染图谱
+        function renderGraph() {
+            const container = document.getElementById('graph-container');
+            const width = container.clientWidth;
+            const height = container.clientHeight;
+            
+            // 清空现有内容
+            d3.select('#graph-svg').selectAll('*').remove();
+            
+            const svg = d3.select('#graph-svg')
+                .attr('width', width)
+                .attr('height', height);
+            
+            // 创建缩放功能
+            const g = svg.append('g');
+            const zoom = d3.zoom()
+                .scaleExtent([0.5, 3])
+                .on('zoom', (event) => {
+                    g.attr('transform', event.transform);
+                });
+            svg.call(zoom);
+            
+            // 创建力导向图
+            simulation = d3.forceSimulation(graphData.nodes)
+                .force('link', d3.forceLink(graphData.edges).id(d => d.id).distance(100))
+                .force('charge', d3.forceManyBody().strength(-300))
+                .force('center', d3.forceCenter(width / 2, height / 2))
+                .force('collision', d3.forceCollide().radius(30));
+            
+            // 创建连线
+            const link = g.append('g')
+                .selectAll('line')
+                .data(graphData.edges)
+                .enter().append('line')
+                .attr('class', 'link')
+                .attr('stroke', '#999')
+                .attr('stroke-width', 2);
+            
+            // 创建节点
+            const node = g.append('g')
+                .selectAll('circle')
+                .data(graphData.nodes)
+                .enter().append('circle')
+                .attr('class', 'node')
+                .attr('r', 10)
+                .attr('fill', d => fieldColors[d.field] || '#999')
+                .call(drag(simulation));
+            
+            // 创建标签
+            const label = g.append('g')
+                .selectAll('text')
+                .data(graphData.nodes)
+                .enter().append('text')
+                .text(d => d.name)
+                .attr('font-size', '12px')
+                .attr('dx', 15)
+                .attr('dy', 4);
+            
+            // 添加工具提示
+            const tooltip = d3.select('.tooltip');
+            
+            node.on('mouseover', (event, d) => {
+                tooltip.style('display', 'block')
+                    .html(`
+                        <strong>${d.name}</strong><br>
+                        ${d.field ? `领域: ${d.field}<br>` : ''}
+                        ${d.nationality ? `国籍: ${d.nationality}<br>` : ''}
+                        ${d.birth_year ? `出生: ${d.birth_year}年` : ''}
+                        ${d.death_year ? ` - ${d.death_year}年` : ''}
+                    `);
+            })
+            .on('mousemove', (event) => {
+                tooltip.style('left', (event.pageX + 10) + 'px')
+                    .style('top', (event.pageY - 10) + 'px');
+            })
+            .on('mouseout', () => {
+                tooltip.style('display', 'none');
+            })
+            .on('click', (event, d) => {
+                // 点击节点跳转到学者页面
+                if (d.file) {
+                    window.location.href = d.file;
+                }
+            });
+            
+            // 更新位置
+            simulation.on('tick', () => {
+                link
+                    .attr('x1', d => d.source.x)
+                    .attr('y1', d => d.source.y)
+                    .attr('x2', d => d.target.x)
+                    .attr('y2', d => d.target.y);
+                
+                node
+                    .attr('cx', d => d.x)
+                    .attr('cy', d => d.y);
+                
+                label
+                    .attr('x', d => d.x)
+                    .attr('y', d => d.y);
+            });
+        }
+        
+        // 拖拽功能
+        function drag(simulation) {
+            function dragstarted(event, d) {
+                if (!event.active) simulation.alphaTarget(0.3).restart();
+                d.fx = d.x;
+                d.fy = d.y;
+            }
+            
+            function dragged(event, d) {
+                d.fx = event.x;
+                d.fy = event.y;
+            }
+            
+            function dragended(event, d) {
+                if (!event.active) simulation.alphaTarget(0);
+                d.fx = null;
+                d.fy = null;
+            }
+            
+            return d3.drag()
+                .on('start', dragstarted)
+                .on('drag', dragged)
+                .on('end', dragended);
+        }
+        
+        // 控制面板事件
+        document.getElementById('node-size').addEventListener('input', (e) => {
+            d3.selectAll('.node').attr('r', e.target.value);
+        });
+        
+        document.getElementById('link-strength').addEventListener('input', (e) => {
+            simulation.force('charge').strength(-e.target.value * 6);
+            simulation.alpha(0.3).restart();
+        });
+        
+        document.getElementById('field-filter').addEventListener('change', (e) => {
+            const field = e.target.value;
+            if (field === 'all') {
+                d3.selectAll('.node').style('opacity', 1);
+                d3.selectAll('.link').style('opacity', 0.6);
+            } else {
+                d3.selectAll('.node').style('opacity', d => d.field === field ? 1 : 0.2);
+                d3.selectAll('.link').style('opacity', 0.2);
+            }
+        });
+        
+        document.getElementById('reset-view').addEventListener('click', () => {
+            renderGraph();
+        });
+        
+        // 初始化
+        loadGraphData();
+        
+        // 响应窗口大小变化
+        window.addEventListener('resize', () => {
+            if (graphData) {
+                renderGraph();
+            }
+        });
+    </script>
+</body>
+</html>

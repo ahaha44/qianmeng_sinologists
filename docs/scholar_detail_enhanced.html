@@ -1,0 +1,436 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>汉学家详情 - 增强版展示</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdn.jsdelivr.net/npm/vis-network@9.1.2/dist/vis-network.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.0/dist/chart.umd.min.js"></script>
+    <link href="https://cdn.jsdelivr.net/npm/vis-network@9.1.2/dist/dist/vis-network.min.css" rel="stylesheet">
+    <style>
+        .gradient-bg {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+        }
+        .card-shadow {
+            box-shadow: 0 20px 40px rgba(0,0,0,0.1);
+        }
+        .tag {
+            @apply inline-block px-3 py-1 text-sm rounded-full mr-2 mb-2;
+        }
+        #network {
+            height: 400px;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+        }
+        .timeline-item {
+            position: relative;
+            padding-left: 40px;
+            margin-bottom: 20px;
+        }
+        .timeline-item::before {
+            content: '';
+            position: absolute;
+            left: 15px;
+            top: 5px;
+            width: 10px;
+            height: 10px;
+            border-radius: 50%;
+            background: #667eea;
+        }
+        .timeline-item::after {
+            content: '';
+            position: absolute;
+            left: 19px;
+            top: 15px;
+            width: 2px;
+            height: calc(100% + 10px);
+            background: #e5e7eb;
+        }
+        .timeline-item:last-child::after {
+            display: none;
+        }
+    </style>
+</head>
+<body class="bg-gray-50 min-h-screen">
+    <!-- 顶部导航 -->
+    <nav class="bg-white shadow-lg sticky top-0 z-50">
+        <div class="container mx-auto px-4 py-4">
+            <div class="flex justify-between items-center">
+                <h1 class="text-2xl font-bold gradient-bg text-transparent bg-clip-text">汉学家知识图谱</h1>
+                <div class="flex space-x-4">
+                    <button onclick="location.href='index.html'" class="px-4 py-2 text-gray-700 hover:text-purple-600">首页</button>
+                    <button onclick="location.href='people.html'" class="px-4 py-2 text-gray-700 hover:text-purple-600">学者列表</button>
+                    <button class="px-4 py-2 bg-purple-600 text-white rounded-lg hover:bg-purple-700">知识图谱</button>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- 主要内容区 -->
+    <div class="container mx-auto px-4 py-8">
+        <!-- 学者基本信息卡片 -->
+        <div class="bg-white rounded-2xl card-shadow p-8 mb-8">
+            <div class="grid md:grid-cols-3 gap-8">
+                <!-- 左侧：照片和基本信息 -->
+                <div class="md:col-span-1">
+                    <div class="w-48 h-48 mx-auto bg-gray-200 rounded-lg mb-4 flex items-center justify-center">
+                        <svg class="w-24 h-24 text-gray-400" fill="currentColor" viewBox="0 0 24 24">
+                            <path d="M12 12c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm0 2c-2.67 0-10 1.34-10 4v2h20v-2c0-2.66-7.33-4-10-4z"/>
+                        </svg>
+                    </div>
+                    <h2 id="scholarName" class="text-2xl font-bold text-center mb-2">Joseph Needham</h2>
+                    <p id="scholarNameZh" class="text-lg text-gray-600 text-center mb-4">李约瑟</p>
+                    
+                    <div class="space-y-2 text-sm">
+                        <div class="flex justify-between">
+                            <span class="text-gray-600">生卒年:</span>
+                            <span id="birthDeath" class="font-medium">1900-1995</span>
+                        </div>
+                        <div class="flex justify-between">
+                            <span class="text-gray-600">国籍:</span>
+                            <span id="nationality" class="font-medium">英国</span>
+                        </div>
+                        <div class="flex justify-between">
+                            <span class="text-gray-600">年龄:</span>
+                            <span id="age" class="font-medium">95岁</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 中间：研究领域和成就 -->
+                <div class="md:col-span-2">
+                    <div class="mb-6">
+                        <h3 class="text-lg font-semibold mb-3">研究领域</h3>
+                        <div id="researchFields">
+                            <span class="tag bg-purple-100 text-purple-700">中国科技史</span>
+                            <span class="tag bg-blue-100 text-blue-700">生物化学</span>
+                            <span class="tag bg-green-100 text-green-700">汉学研究</span>
+                            <span class="tag bg-yellow-100 text-yellow-700">比较文明史</span>
+                        </div>
+                    </div>
+
+                    <div class="mb-6">
+                        <h3 class="text-lg font-semibold mb-3">主要著作</h3>
+                        <ul id="majorWorks" class="space-y-2">
+                            <li class="flex items-start">
+                                <span class="text-purple-500 mr-2">•</span>
+                                <span>《中国科学技术史》(Science and Civilisation in China)</span>
+                            </li>
+                            <li class="flex items-start">
+                                <span class="text-purple-500 mr-2">•</span>
+                                <span>《大滴定：东西方的科学与社会》</span>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <div>
+                        <h3 class="text-lg font-semibold mb-3">简介</h3>
+                        <p id="abstract" class="text-gray-700 leading-relaxed">
+                            约瑟夫·尼达姆（Joseph Needham），汉名李约瑟，是英国著名科学史家、生物化学家。他主持编撰的《中国科学技术史》是研究中国科技史的里程碑式著作，对西方了解中国古代科技成就做出了巨大贡献。他提出了著名的"李约瑟难题"。
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- 关系网络图 -->
+        <div class="grid md:grid-cols-2 gap-8 mb-8">
+            <div class="bg-white rounded-xl card-shadow p-6">
+                <h3 class="text-xl font-bold mb-4">学术关系网络</h3>
+                <div id="network"></div>
+                <div class="mt-4 flex justify-center space-x-4 text-sm">
+                    <div class="flex items-center">
+                        <div class="w-3 h-3 bg-purple-600 rounded-full mr-2"></div>
+                        <span>本人</span>
+                    </div>
+                    <div class="flex items-center">
+                        <div class="w-3 h-3 bg-blue-500 rounded-full mr-2"></div>
+                        <span>导师</span>
+                    </div>
+                    <div class="flex items-center">
+                        <div class="w-3 h-3 bg-green-500 rounded-full mr-2"></div>
+                        <span>学生</span>
+                    </div>
+                    <div class="flex items-center">
+                        <div class="w-3 h-3 bg-yellow-500 rounded-full mr-2"></div>
+                        <span>合作者</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 时间轴 -->
+            <div class="bg-white rounded-xl card-shadow p-6">
+                <h3 class="text-xl font-bold mb-4">学术生涯时间轴</h3>
+                <div id="timeline" class="overflow-y-auto max-h-96">
+                    <div class="timeline-item">
+                        <div class="font-semibold">1900年</div>
+                        <div class="text-gray-600">出生于伦敦</div>
+                    </div>
+                    <div class="timeline-item">
+                        <div class="font-semibold">1924年</div>
+                        <div class="text-gray-600">获剑桥大学博士学位</div>
+                    </div>
+                    <div class="timeline-item">
+                        <div class="font-semibold">1937年</div>
+                        <div class="text-gray-600">首次访问中国</div>
+                    </div>
+                    <div class="timeline-item">
+                        <div class="font-semibold">1942-1946年</div>
+                        <div class="text-gray-600">担任中英科学合作馆馆长</div>
+                    </div>
+                    <div class="timeline-item">
+                        <div class="font-semibold">1954年</div>
+                        <div class="text-gray-600">开始编撰《中国科学技术史》</div>
+                    </div>
+                    <div class="timeline-item">
+                        <div class="font-semibold">1995年</div>
+                        <div class="text-gray-600">在剑桥逝世</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- 数据统计 -->
+        <div class="grid md:grid-cols-3 gap-8 mb-8">
+            <div class="bg-white rounded-xl card-shadow p-6">
+                <h3 class="text-lg font-semibold mb-4">研究成果统计</h3>
+                <canvas id="researchChart"></canvas>
+            </div>
+            
+            <div class="bg-white rounded-xl card-shadow p-6">
+                <h3 class="text-lg font-semibold mb-4">影响力指标</h3>
+                <div class="space-y-4">
+                    <div>
+                        <div class="flex justify-between mb-1">
+                            <span class="text-gray-600">学术影响力</span>
+                            <span class="font-medium">95%</span>
+                        </div>
+                        <div class="w-full bg-gray-200 rounded-full h-2">
+                            <div class="bg-purple-600 h-2 rounded-full" style="width: 95%"></div>
+                        </div>
+                    </div>
+                    <div>
+                        <div class="flex justify-between mb-1">
+                            <span class="text-gray-600">国际认可度</span>
+                            <span class="font-medium">88%</span>
+                        </div>
+                        <div class="w-full bg-gray-200 rounded-full h-2">
+                            <div class="bg-blue-600 h-2 rounded-full" style="width: 88%"></div>
+                        </div>
+                    </div>
+                    <div>
+                        <div class="flex justify-between mb-1">
+                            <span class="text-gray-600">著作引用率</span>
+                            <span class="font-medium">92%</span>
+                        </div>
+                        <div class="w-full bg-gray-200 rounded-full h-2">
+                            <div class="bg-green-600 h-2 rounded-full" style="width: 92%"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="bg-white rounded-xl card-shadow p-6">
+                <h3 class="text-lg font-semibold mb-4">相关学者推荐</h3>
+                <div class="space-y-3">
+                    <a href="#" class="block p-3 bg-gray-50 rounded-lg hover:bg-gray-100 transition">
+                        <div class="font-medium">鲁桂珍 (Lu Gwei-djen)</div>
+                        <div class="text-sm text-gray-600">合作者 • 中国科技史</div>
+                    </a>
+                    <a href="#" class="block p-3 bg-gray-50 rounded-lg hover:bg-gray-100 transition">
+                        <div class="font-medium">Nathan Sivin</div>
+                        <div class="text-sm text-gray-600">学生 • 中国医学史</div>
+                    </a>
+                    <a href="#" class="block p-3 bg-gray-50 rounded-lg hover:bg-gray-100 transition">
+                        <div class="font-medium">王铃 (Wang Ling)</div>
+                        <div class="text-sm text-gray-600">合作者 • 中国天文学史</div>
+                    </a>
+                </div>
+            </div>
+        </div>
+
+        <!-- AI 问答助手 -->
+        <div class="bg-white rounded-xl card-shadow p-6">
+            <h3 class="text-xl font-bold mb-4">智能问答助手</h3>
+            <div class="mb-4">
+                <div class="flex space-x-2">
+                    <input type="text" id="questionInput" 
+                           placeholder="询问关于该学者的任何问题，例如：他的主要贡献是什么？" 
+                           class="flex-1 px-4 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-purple-300">
+                    <button onclick="askQuestion()" 
+                            class="px-6 py-2 bg-purple-600 text-white rounded-lg hover:bg-purple-700">
+                        提问
+                    </button>
+                </div>
+            </div>
+            <div id="answerArea" class="hidden">
+                <div class="p-4 bg-purple-50 rounded-lg">
+                    <div class="font-semibold mb-2">回答：</div>
+                    <div id="answerText" class="text-gray-700"></div>
+                </div>
+            </div>
+            
+            <!-- 预设问题 -->
+            <div class="mt-4">
+                <div class="text-sm text-gray-600 mb-2">快速提问：</div>
+                <div class="flex flex-wrap gap-2">
+                    <button onclick="quickAsk('李约瑟难题是什么？')" 
+                            class="px-3 py-1 bg-gray-100 rounded-full text-sm hover:bg-gray-200">
+                        李约瑟难题是什么？
+                    </button>
+                    <button onclick="quickAsk('他对中国科技史的主要贡献')" 
+                            class="px-3 py-1 bg-gray-100 rounded-full text-sm hover:bg-gray-200">
+                        他对中国科技史的主要贡献
+                    </button>
+                    <button onclick="quickAsk('他的学术传承者有哪些？')" 
+                            class="px-3 py-1 bg-gray-100 rounded-full text-sm hover:bg-gray-200">
+                        他的学术传承者有哪些？
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // 初始化关系网络图
+        function initNetwork() {
+            const container = document.getElementById('network');
+            
+            // 创建节点
+            const nodes = new vis.DataSet([
+                {id: 1, label: 'Joseph Needham', color: '#667eea', size: 30},
+                {id: 2, label: 'Frederick Hopkins', color: '#3B82F6', size: 20},
+                {id: 3, label: 'Lu Gwei-djen', color: '#F59E0B', size: 20},
+                {id: 4, label: 'Wang Ling', color: '#F59E0B', size: 20},
+                {id: 5, label: 'Nathan Sivin', color: '#10B981', size: 20},
+                {id: 6, label: 'Christopher Cullen', color: '#10B981', size: 20},
+                {id: 7, label: 'Francesca Bray', color: '#10B981', size: 20}
+            ]);
+            
+            // 创建边
+            const edges = new vis.DataSet([
+                {from: 2, to: 1, label: '导师', color: '#3B82F6'},
+                {from: 1, to: 3, label: '合作', color: '#F59E0B'},
+                {from: 1, to: 4, label: '合作', color: '#F59E0B'},
+                {from: 1, to: 5, label: '指导', color: '#10B981'},
+                {from: 1, to: 6, label: '影响', color: '#10B981'},
+                {from: 1, to: 7, label: '影响', color: '#10B981'}
+            ]);
+            
+            // 配置选项
+            const options = {
+                nodes: {
+                    shape: 'dot',
+                    font: {
+                        size: 12,
+                        color: '#333'
+                    }
+                },
+                edges: {
+                    font: {
+                        size: 10,
+                        align: 'middle'
+                    },
+                    arrows: {
+                        to: {
+                            enabled: true,
+                            scaleFactor: 0.5
+                        }
+                    }
+                },
+                physics: {
+                    stabilization: false,
+                    barnesHut: {
+                        gravitationalConstant: -8000,
+                        springConstant: 0.04
+                    }
+                }
+            };
+            
+            // 创建网络
+            const network = new vis.Network(container, {nodes, edges}, options);
+        }
+
+        // 初始化研究成果图表
+        function initChart() {
+            const ctx = document.getElementById('researchChart').getContext('2d');
+            new Chart(ctx, {
+                type: 'doughnut',
+                data: {
+                    labels: ['专著', '论文', '译作', '编著'],
+                    datasets: [{
+                        data: [15, 45, 8, 12],
+                        backgroundColor: [
+                            '#667eea',
+                            '#3B82F6',
+                            '#10B981',
+                            '#F59E0B'
+                        ]
+                    }]
+                },
+                options: {
+                    responsive: true,
+                    plugins: {
+                        legend: {
+                            position: 'bottom'
+                        }
+                    }
+                }
+            });
+        }
+
+        // 问答功能
+        function askQuestion() {
+            const input = document.getElementById('questionInput').value;
+            if (!input) return;
+            
+            // 模拟AI回答
+            showAnswer(`根据知识图谱分析，关于"${input}"的回答是：这是一个很好的问题。Joseph Needham的主要贡献包括...`);
+        }
+
+        function quickAsk(question) {
+            document.getElementById('questionInput').value = question;
+            askQuestion();
+        }
+
+        function showAnswer(text) {
+            const answerArea = document.getElementById('answerArea');
+            const answerText = document.getElementById('answerText');
+            answerText.textContent = text;
+            answerArea.classList.remove('hidden');
+        }
+
+        // 页面加载时初始化
+        window.onload = function() {
+            initNetwork();
+            initChart();
+            
+            // 从URL参数或本地存储加载学者数据
+            loadScholarData();
+        };
+
+        // 加载学者数据
+        function loadScholarData() {
+            // 这里可以从API或本地JSON文件加载数据
+            // 示例：使用URL参数
+            const urlParams = new URLSearchParams(window.location.search);
+            const scholarId = urlParams.get('id');
+            
+            if (scholarId) {
+                // fetch(`/api/scholars/${scholarId}`)
+                //     .then(response => response.json())
+                //     .then(data => updateUI(data));
+            }
+        }
+
+        // 更新UI
+        function updateUI(data) {
+            // 更新页面上的各个元素
+            document.getElementById('scholarName').textContent = data.name || 'Joseph Needham';
+            document.getElementById('scholarNameZh').textContent = data.name_zh || '李约瑟';
+            // ... 更新其他元素
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,466 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>汉学研究 - 探索中国文化的西方视角</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/themes/prism-tomorrow.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/prism.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/components/prism-javascript.min.js"></script>
+    <style>
+        @keyframes slideIn {
+            from { transform: translateX(-100%); opacity: 0; }
+            to { transform: translateX(0); opacity: 1; }
+        }
+        @keyframes bounce {
+            0%, 100% { transform: translateY(0); }
+            50% { transform: translateY(-10px); }
+        }
+        @keyframes pulse {
+            0%, 100% { transform: scale(1); }
+            50% { transform: scale(1.05); }
+        }
+        @keyframes rotate {
+            from { transform: rotate(0deg); }
+            to { transform: rotate(360deg); }
+        }
+        .slide-in { animation: slideIn 0.6s ease-out; }
+        .bounce { animation: bounce 2s infinite; }
+        .pulse { animation: pulse 2s infinite; }
+        .rotate-slow { animation: rotate 20s linear infinite; }
+        .icon {
+            height: 1.25em;
+            width: auto;
+            display: inline-block;
+            vertical-align: middle;
+            fill: currentColor;
+        }
+        @media (min-width: 1024px) {
+            .icon { height: 2em; }
+        }
+        .gradient-text {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+        .card-hover {
+            transition: all 0.3s ease;
+        }
+        .card-hover:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 20px 40px rgba(0,0,0,0.1);
+        }
+        .timeline-dot {
+            position: relative;
+        }
+        .timeline-dot::before {
+            content: '';
+            position: absolute;
+            width: 100%;
+            height: 2px;
+            background: linear-gradient(90deg, #667eea, #764ba2);
+            top: 50%;
+            left: 100%;
+        }
+        .timeline-item:last-child .timeline-dot::before {
+            display: none;
+        }
+    </style>
+</head>
+<body class="bg-gradient-to-br from-purple-50 via-pink-50 to-blue-50 min-h-screen">
+
+    <!-- Hero Section -->
+    <section class="container mx-auto px-4 py-16" style="background-image:url('assets/images/banner.jpg'); background-size:cover; background-position:center; border-radius:1rem;">
+        <div class="text-center slide-in">
+            <svg class="icon mx-auto mb-4 text-purple-600 rotate-slow" aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <circle cx="12" cy="12" r="10"/>
+                <path d="M12 2v20M2 12h20"/>
+                <path d="M12 2a10 10 0 0 1 0 20"/>
+            </svg>
+            <h2 class="text-5xl font-bold mb-4 gradient-text">探索中西文化交流的桥梁</h2>
+            <p class="text-xl text-gray-700 max-w-3xl mx-auto">
+                汉学 (Sinology) 是西方学者对中国语言、文学、历史和文化的研究学科
+            </p>
+        </div>
+    </section>
+
+    <!-- Navigation -->
+    <nav class="sticky top-0 z-50 bg-white/90 backdrop-blur-md shadow-lg">
+        <div class="container mx-auto px-4 py-4">
+            <div class="flex justify-between items-center">
+                <h1 class="text-4xl font-bold gradient-text">汉学研究 (Sinology)</h1>
+                <div class="flex space-x-6">
+                    <a href="#intro" class="text-gray-700 hover:text-purple-600 transition-colors">简介</a>
+                    <a href="#history" class="text-gray-700 hover:text-purple-600 transition-colors">历史</a>
+                    <a href="#people" class="text-gray-700 hover:text-purple-600 transition-colors">学者索引</a>
+                    <a href="#knowledge-graph" class="text-gray-700 hover:text-purple-600 transition-colors">知识图谱</a>
+                    <a href="#fields" class="text-gray-700 hover:text-purple-600 transition-colors">研究领域</a>
+                    <a href="#impact" class="text-gray-700 hover:text-purple-600 transition-colors">影响</a>
+                                    <img src="assets/images/logo.jpg" alt="Logo" class="h-10 w-auto hidden sm:block"/>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Introduction Section -->
+    <section id="intro" class="container mx-auto px-4 py-12">
+        <div class="bg-white rounded-2xl shadow-xl p-8 card-hover">
+            <h3 class="text-3xl font-bold mb-6 text-purple-800">
+                <svg class="icon mr-2" aria-hidden="true" viewBox="0 0 24 24" fill="currentColor">
+                    <path d="M12 2L2 7v10c0 5.55 3.84 10.74 9 12 5.16-1.26 9-6.45 9-12V7l-10-5z"/>
+                </svg>
+                什么是汉学？
+            </h3>
+            <div class="grid md:grid-cols-2 gap-8">
+                <div class="space-y-4">
+                    <p class="text-gray-700 leading-relaxed">
+                        <strong class="text-purple-600">汉学 (Sinology)</strong> 是指在中国以外地区，特别是西方国家，对中国语言、文学、历史、思想、艺术等方面进行的学术研究。
+                    </p>
+                    <div class="bg-gradient-to-r from-purple-100 to-pink-100 p-4 rounded-lg">
+                        <h4 class="font-semibold text-purple-800 mb-2">核心特征 (Core Features)</h4>
+                        <ul class="space-y-2 text-gray-700">
+                            <li class="flex items-start">
+                                <span class="text-purple-500 mr-2">•</span>
+                                跨文化视角 (Cross-cultural Perspective)
+                            </li>
+                            <li class="flex items-start">
+                                <span class="text-purple-500 mr-2">•</span>
+                                多学科研究 (Interdisciplinary Research)
+                            </li>
+                            <li class="flex items-start">
+                                <span class="text-purple-500 mr-2">•</span>
+                                语言能力要求 (Language Proficiency)
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="bg-gradient-to-br from-blue-500 to-purple-600 p-6 rounded-xl text-white pulse">
+                    <h4 class="text-2xl font-bold mb-4">研究范围</h4>
+                    <div class="space-y-3">
+                        <div class="flex items-center">
+                            <svg class="icon mr-3" aria-hidden="true" viewBox="0 0 24 24" fill="currentColor">
+                                <path d="M3 5h18v14H3V5zm2 2v10h14V7H5z"/>
+                            </svg>
+                            <span>古典文献研究</span>
+                        </div>
+                        <div class="flex items-center">
+                            <svg class="icon mr-3" aria-hidden="true" viewBox="0 0 24 24" fill="currentColor">
+                                <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/>
+                            </svg>
+                            <span>哲学思想探究</span>
+                        </div>
+                        <div class="flex items-center">
+                            <svg class="icon mr-3" aria-hidden="true" viewBox="0 0 24 24" fill="currentColor">
+                                <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2z"/>
+                            </svg>
+                            <span>当代中国研究</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- History Timeline -->
+    <section id="history" class="container mx-auto px-4 py-12">
+        <h3 class="text-3xl font-bold mb-8 text-center gradient-text">汉学发展史 (History of Sinology)</h3>
+        <div class="relative">
+            <div class="flex overflow-x-auto space-x-8 pb-4">
+                <div class="timeline-item flex-shrink-0 w-64">
+                    <div class="bg-white rounded-lg shadow-lg p-6 card-hover">
+                        <div class="timeline-dot w-4 h-4 bg-purple-600 rounded-full mb-4"></div>
+                        <h4 class="font-bold text-purple-800 mb-2">16-17世纪</h4>
+                        <p class="text-sm text-gray-600">传教士时期 (Missionary Period)</p>
+                        <p class="text-xs mt-2">利玛窦等耶稣会士开创性工作</p>
+                    </div>
+                </div>
+                <div class="timeline-item flex-shrink-0 w-64">
+                    <div class="bg-white rounded-lg shadow-lg p-6 card-hover">
+                        <div class="timeline-dot w-4 h-4 bg-purple-600 rounded-full mb-4"></div>
+                        <h4 class="font-bold text-purple-800 mb-2">18-19世纪</h4>
+                        <p class="text-sm text-gray-600">学院派兴起 (Academic Rise)</p>
+                        <p class="text-xs mt-2">欧洲大学设立汉学教席</p>
+                    </div>
+                </div>
+                <div class="timeline-item flex-shrink-0 w-64">
+                    <div class="bg-white rounded-lg shadow-lg p-6 card-hover">
+                        <div class="timeline-dot w-4 h-4 bg-purple-600 rounded-full mb-4"></div>
+                        <h4 class="font-bold text-purple-800 mb-2">20世纪</h4>
+                        <p class="text-sm text-gray-600">现代汉学 (Modern Sinology)</p>
+                        <p class="text-xs mt-2">费正清等学者的系统研究</p>
+                    </div>
+                </div>
+                <div class="timeline-item flex-shrink-0 w-64">
+                    <div class="bg-white rounded-lg shadow-lg p-6 card-hover">
+                        <div class="timeline-dot w-4 h-4 bg-purple-600 rounded-full mb-4"></div>
+                        <h4 class="font-bold text-purple-800 mb-2">21世纪</h4>
+                        <p class="text-sm text-gray-600">全球化时代 (Globalization Era)</p>
+                        <p class="text-xs mt-2">跨学科、多元化发展</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- People (embedded index) -->
+    <section id="people" class="container mx-auto px-4 py-12">
+      <div class="bg-white rounded-2xl shadow-xl p-8">
+        <div class="flex items-center justify-between mb-6">
+          <div class="flex items-center gap-3">
+            <svg class="h-6 w-6 text-purple-600" aria-hidden="true" viewBox="0 0 24 24" fill="currentColor"><path d="M12 12c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm0 2c-3.33 0-6 2.24-6 5v1h12v-1c0-2.76-2.67-5-6-5z"/></svg>
+            <div class="text-sm text-gray-600">总人数</div>
+            <div id="totalCount" class="text-2xl font-bold">0</div>
+          </div>
+          <input id="q" type="search" placeholder="搜索姓名（支持片段）" class="w-full md:w-80 border rounded-lg px-3 py-2 focus:outline-none focus:ring-2 focus:ring-purple-300"/>
+        </div>
+        <div id="letterFilters" class="flex flex-wrap gap-2 mb-3"></div>
+        <ul id="list" class="grid md:grid-cols-3 gap-3"></ul>
+        <div class="text-right mt-4"><a class="text-purple-600 hover:underline" href="people/">查看更多</a></div>
+      </div>
+    </section>
+
+    <!-- Knowledge Graph Section -->
+    <section id="knowledge-graph" class="container mx-auto px-4 py-12">
+        <div class="bg-white rounded-2xl shadow-xl p-8">
+            <h3 class="text-3xl font-bold mb-6 text-center gradient-text">
+                <svg class="icon mr-2" aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <circle cx="8" cy="8" r="3"/>
+                    <circle cx="16" cy="16" r="3"/>
+                    <circle cx="16" cy="8" r="3"/>
+                    <circle cx="8" cy="16" r="3"/>
+                    <line x1="10.5" y1="9.5" x2="13.5" y2="14.5"/>
+                    <line x1="13.5" y1="9.5" x2="10.5" y2="14.5"/>
+                </svg>
+                汉学家知识图谱
+            </h3>
+            
+            <div class="grid md:grid-cols-2 gap-8 mb-8">
+                <div>
+                    <h4 class="font-bold text-xl mb-4 text-purple-800">探索学者关系网络</h4>
+                    <p class="text-gray-700 leading-relaxed mb-4">
+                        基于人工智能技术构建的汉学家知识图谱，展示学者之间的潜在联系、研究领域分布和学术传承关系。
+                    </p>
+                    <ul class="space-y-2 text-gray-700">
+                        <li class="flex items-start">
+                            <span class="text-purple-500 mr-2">•</span>
+                            <span>可视化学者关系网络</span>
+                        </li>
+                        <li class="flex items-start">
+                            <span class="text-purple-500 mr-2">•</span>
+                            <span>按研究领域筛选查看</span>
+                        </li>
+                        <li class="flex items-start">
+                            <span class="text-purple-500 mr-2">•</span>
+                            <span>交互式图谱探索</span>
+                        </li>
+                        <li class="flex items-start">
+                            <span class="text-purple-500 mr-2">•</span>
+                            <span>时代与地域分布分析</span>
+                        </li>
+                    </ul>
+                </div>
+                
+                <div class="bg-gradient-to-br from-purple-100 to-pink-100 p-6 rounded-xl">
+                    <div class="grid grid-cols-2 gap-4 text-center">
+                        <div class="bg-white rounded-lg p-4">
+                            <div class="text-3xl font-bold text-purple-600">30+</div>
+                            <div class="text-sm text-gray-600">学者节点</div>
+                        </div>
+                        <div class="bg-white rounded-lg p-4">
+                            <div class="text-3xl font-bold text-blue-600">20+</div>
+                            <div class="text-sm text-gray-600">关系连接</div>
+                        </div>
+                        <div class="bg-white rounded-lg p-4">
+                            <div class="text-3xl font-bold text-green-600">8</div>
+                            <div class="text-sm text-gray-600">研究领域</div>
+                        </div>
+                        <div class="bg-white rounded-lg p-4">
+                            <div class="text-3xl font-bold text-red-600">5+</div>
+                            <div class="text-sm text-gray-600">国籍分布</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="text-center">
+                <a href="knowledge_graph.html" class="inline-flex items-center px-6 py-3 bg-gradient-to-r from-purple-600 to-pink-600 text-white font-bold rounded-lg hover:from-purple-700 hover:to-pink-700 transition-all transform hover:scale-105">
+                    <svg class="icon mr-2" aria-hidden="true" viewBox="0 0 24 24" fill="currentColor">
+                        <path d="M19 3H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zM9 17H7v-7h2v7zm4 0h-2V7h2v10zm4 0h-2v-4h2v4z"/>
+                    </svg>
+                    进入知识图谱
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Research Fields -->
+    <section id="fields" class="container mx-auto px-4 py-12">
+        <h3 class="text-3xl font-bold mb-8 text-center gradient-text">研究领域 (Research Fields)</h3>
+        <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-4">
+            <div class="bg-gradient-to-br from-purple-400 to-purple-600 p-6 rounded-xl text-white transform hover:scale-105 transition-transform">
+                <svg class="icon mb-3" aria-hidden="true" viewBox="0 0 24 24" fill="currentColor">
+                    <path d="M21 5c-1.11-.35-2.33-.5-3.5-.5-1.95 0-4.05.4-5.5 1.5-1.45-1.1-3.55-1.5-5.5-1.5S2.45 4.9 1 6v14.65c0 .25.25.5.5.5.1 0 .15-.05.25-.05C3.1 20.45 5.05 20 6.5 20c1.95 0 4.05.4 5.5 1.5 1.35-.85 3.8-1.5 5.5-1.5 1.65 0 3.35.3 4.75 1.05.1.05.15.05.25.05.25 0 .5-.25.5-.5V6c-.6-.45-1.25-.75-2-1z"/>
+                </svg>
+                <h4 class="font-bold text-lg">语言文字学</h4>
+                <p class="text-sm mt-2">古汉语、方言研究</p>
+            </div>
+            <div class="bg-gradient-to-br from-blue-400 to-blue-600 p-6 rounded-xl text-white transform hover:scale-105 transition-transform">
+                <svg class="icon mb-3" aria-hidden="true" viewBox="0 0 24 24" fill="currentColor">
+                    <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/>
+                </svg>
+                <h4 class="font-bold text-lg">哲学思想</h4>
+                <p class="text-sm mt-2">儒释道研究</p>
+            </div>
+            <div class="bg-gradient-to-br from-green-400 to-green-600 p-6 rounded-xl text-white transform hover:scale-105 transition-transform">
+                <svg class="icon mb-3" aria-hidden="true" viewBox="0 0 24 24" fill="currentColor">
+                    <path d="M13 12h7v1.5h-7zm0-2.5h7V11h-7zm0 5h7V16h-7zM21 4H3c-1.1 0-2 .9-2 2v13c0 1.1.9 2 2 2h18c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 15h-9V6h9v13z"/>
+                </svg>
+                <h4 class="font-bold text-lg">历史研究</h4>
+                <p class="text-sm mt-2">朝代史、社会史</p>
+            </div>
+            <div class="bg-gradient-to-br from-pink-400 to-pink-600 p-6 rounded-xl text-white transform hover:scale-105 transition-transform">
+                <svg class="icon mb-3" aria-hidden="true" viewBox="0 0 24 24" fill="currentColor">
+                    <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"/>
+                </svg>
+                <h4 class="font-bold text-lg">艺术文学</h4>
+                <p class="text-sm mt-2">诗词、书画研究</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Impact Section -->
+    <section id="impact" class="container mx-auto px-4 py-12">
+        <div class="bg-white rounded-2xl shadow-xl p-8">
+            <h3 class="text-3xl font-bold mb-6 gradient-text text-center">汉学的影响与意义 (Impact and Significance)</h3>
+            <div class="grid md:grid-cols-2 gap-8 mt-8">
+                <div class="space-y-4">
+                    <h4 class="text-xl font-bold text-purple-800 flex items-center">
+                        <svg class="icon mr-2" aria-hidden="true" viewBox="0 0 24 24" fill="currentColor">
+                            <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2z"/>
+                        </svg>
+                        文化交流 (Cultural Exchange)
+                    </h4>
+                    <ul class="space-y-2 text-gray-700">
+                        <li class="flex items-start">
+                            <span class="text-purple-500 mr-2 mt-1">▸</span>
+                            <span>促进中西方文明对话与理解</span>
+                        </li>
+                        <li class="flex items-start">
+                            <span class="text-purple-500 mr-2 mt-1">▸</span>
+                            <span>推动文化多样性的保护与发展</span>
+                        </li>
+                        <li class="flex items-start">
+                            <span class="text-purple-500 mr-2 mt-1">▸</span>
+                            <span>建立跨文化沟通的桥梁</span>
+                        </li>
+                    </ul>
+                </div>
+                <div class="space-y-4">
+                    <h4 class="text-xl font-bold text-blue-800 flex items-center">
+                        <svg class="icon mr-2" aria-hidden="true" viewBox="0 0 24 24" fill="currentColor">
+                            <path d="M19 3h-4.18C14.4 1.84 13.3 1 12 1c-1.3 0-2.4.84-2.82 2H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2z"/>
+                        </svg>
+                        学术贡献 (Academic Contributions)
+                    </h4>
+                    <ul class="space-y-2 text-gray-700">
+                        <li class="flex items-start">
+                            <span class="text-blue-500 mr-2 mt-1">▸</span>
+                            <span>丰富人文社会科学研究方法</span>
+                        </li>
+                        <li class="flex items-start">
+                            <span class="text-blue-500 mr-2 mt-1">▸</span>
+                            <span>提供比较研究的重要视角</span>
+                        </li>
+                        <li class="flex items-start">
+                            <span class="text-blue-500 mr-2 mt-1">▸</span>
+                            <span>推动跨学科研究的发展</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            
+            <!-- Interactive Stats -->
+            <div class="mt-8 grid grid-cols-3 gap-4">
+                <div class="text-center p-4 bg-gradient-to-r from-purple-100 to-pink-100 rounded-lg bounce">
+                    <div class="text-3xl font-bold text-purple-600">500+</div>
+                    <div class="text-sm text-gray-600">全球汉学研究机构</div>
+                </div>
+                <div class="text-center p-4 bg-gradient-to-r from-blue-100 to-green-100 rounded-lg bounce" style="animation-delay: 0.2s;">
+                    <div class="text-3xl font-bold text-blue-600">10,000+</div>
+                    <div class="text-sm text-gray-600">活跃汉学研究者</div>
+                </div>
+                <div class="text-center p-4 bg-gradient-to-r from-yellow-100 to-orange-100 rounded-lg bounce" style="animation-delay: 0.4s;">
+                    <div class="text-3xl font-bold text-orange-600">50+</div>
+                    <div class="text-sm text-gray-600">主要研究语言</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="mt-16 py-8 bg-white/50 backdrop-blur">
+        <div class="container mx-auto px-4 text-center">
+            <p class="text-gray-600">探索汉学，连接东西方文明</p>
+        </div>
+    </footer>
+
+    <script>
+    function escapeRegExp(str){return str.replace(/[.*+?^${}()|[\\]\\]/g,'\$&');}
+    function debounce(fn,delay){let t; return (...a)=>{clearTimeout(t); t=setTimeout(()=>fn(...a),delay)}}
+    function initialKey(name){ const m=(name||'').match(/[A-Za-z]/); return m?m[0].toUpperCase():'#'; }
+    async function initPeople(){
+      try{
+        const res = await fetch('manifest.json');
+        const data = await res.json();
+        const items = data.map(x=>({ name:x.name, url:'people/'+(x.file||'').split('/').pop() }))
+                          .filter(x=>x.name && x.url)
+                          .sort((a,b)=>a.name.localeCompare(b.name));
+        const total = items.length;
+        const list = document.getElementById('list');
+        const q = document.getElementById('q');
+        const totalEl = document.getElementById('totalCount');
+        const filters = document.getElementById('letterFilters');
+        if(totalEl) totalEl.textContent = String(total);
+        const letters = ['All'].concat('ABCDEFGHIJKLMNOPQRSTUVWXYZ'.split(''));
+        let active = 'All';
+        if(filters){
+          filters.innerHTML='';
+          letters.forEach(l=>{
+            const b=document.createElement('button');
+            b.type='button'; b.textContent=l;
+            b.className='px-2 py-1 text-sm border rounded hover:bg-purple-50';
+            b.addEventListener('click',()=>{ active=l; render(q? q.value: ''); updateChips(); });
+            filters.appendChild(b);
+          });
+          function updateChips(){
+            Array.from(filters.children).forEach(ch=>{
+              ch.className='px-2 py-1 text-sm border rounded hover:bg-purple-50'+(ch.textContent===active?' bg-purple-600 text-white border-purple-600':'');
+            });
+          }
+          updateChips();
+        }
+        function applyLetterFilter(arr){ return active==='All'? arr : arr.filter(i=>initialKey(i.name)===active); }
+        function render(filter=''){
+          const base = applyLetterFilter(items);
+          const t = (filter||'').trim().toLowerCase();
+          let filtered = t? base.filter(i=>i.name.toLowerCase().includes(t)) : base;
+          filtered = filtered.slice(0, 30);
+          const frag=document.createDocumentFragment();
+          filtered.forEach(i=>{
+            const li=document.createElement('li');
+            const a=document.createElement('a'); a.href=i.url; a.target='_blank'; a.rel='noopener';
+            a.className='block w-full border rounded-lg bg-white hover:shadow px-4 py-3';
+            if(t){ const re=new RegExp(escapeRegExp(t),'ig'); a.innerHTML = i.name.replace(re,m=>`<mark class="bg-yellow-200">${m}</mark>`);} else { a.textContent=i.name; }
+            li.appendChild(a); frag.appendChild(li);
+          });
+          if(list){ list.innerHTML=''; list.appendChild(frag); }
+        }
+        if(q) q.addEventListener('input', debounce(()=>render(q.value), 150));
+        render('');
+      }catch(e){ console.error(e); }
+    }
+    document.addEventListener('DOMContentLoaded', initPeople);
+    </script>
+</body>
+</html>

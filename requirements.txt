@@ -1,0 +1,60 @@
+# 汉学家知识图谱项目依赖
+
+## 基础依赖
+beautifulsoup4>=4.12.0
+requests>=2.31.0
+
+## NLP和Transformer模型
+transformers>=4.36.0
+torch>=2.0.0
+spacy>=3.7.0
+# 安装中文模型: python -m spacy download zh_core_web_sm
+
+## GraphRAG方案（选择其一）
+
+### 方案1: Microsoft GraphRAG (推荐)
+# graphrag>=0.1.0  # 需要从GitHub安装
+# pip install git+https://github.com/microsoft/graphrag.git
+
+### 方案2: LlamaIndex
+llama-index>=0.9.0
+llama-index-llms-openai>=0.1.0
+llama-index-embeddings-openai>=0.1.0
+
+### 方案3: LangChain
+langchain>=0.1.0
+langchain-openai>=0.0.5
+langchain-community>=0.0.10
+
+## 图数据库和可视化
+networkx>=3.2
+pyvis>=0.3.2
+neo4j>=5.15.0  # 可选，用于生产环境
+
+## API服务（可选）
+fastapi>=0.104.0
+uvicorn>=0.24.0
+pydantic>=2.5.0
+
+## 数据处理
+pandas>=2.1.0
+numpy>=1.24.0
+
+## 开发工具（可选）
+jupyter>=1.0.0
+ipython>=8.18.0
+black>=23.12.0
+pytest>=7.4.0
+
+## 注意事项
+# 1. 安装transformers和torch可能需要较长时间
+# 2. 某些GraphRAG方案需要OpenAI API密钥
+# 3. Neo4j需要单独安装数据库服务
+# 4. 建议使用Python 3.9+
+
+## 快速安装基础功能
+# pip install beautifulsoup4 requests transformers torch networkx pyvis
+
+## 安装GraphRAG（选择一个）
+# pip install llama-index llama-index-llms-openai  # LlamaIndex方案
+# pip install langchain langchain-openai  # LangChain方案

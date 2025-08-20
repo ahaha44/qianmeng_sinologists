@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>汉学研究 - 智能知识图谱查询系统</title>
     <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://d3js.org/d3.v7.min.js"></script>
     <style>
         .gradient-text {
             background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
@@ -48,6 +49,44 @@
             transform: translateY(-5px);
             box-shadow: 0 20px 40px rgba(0,0,0,0.1);
         }
+        .graph-container {
+            width: 100%;
+            height: 500px;
+            border: 2px solid #e5e7eb;
+            border-radius: 8px;
+            background: #fafafa;
+            position: relative;
+        }
+        .node {
+            cursor: pointer;
+            stroke: #fff;
+            stroke-width: 2px;
+        }
+        .node:hover {
+            stroke: #667eea;
+            stroke-width: 3px;
+        }
+        .link {
+            stroke: #999;
+            stroke-opacity: 0.6;
+            stroke-width: 1px;
+        }
+        .node-label {
+            font-size: 12px;
+            font-weight: bold;
+            text-anchor: middle;
+            pointer-events: none;
+        }
+        .tooltip {
+            position: absolute;
+            background: rgba(0, 0, 0, 0.8);
+            color: white;
+            padding: 8px 12px;
+            border-radius: 4px;
+            font-size: 12px;
+            pointer-events: none;
+            z-index: 1000;
+        }
     </style>
 </head>
 <body class="bg-gradient-to-br from-purple-50 via-pink-50 to-blue-50 min-h-screen">
@@ -58,6 +97,7 @@
                 <h1 class="text-2xl font-bold gradient-text">汉学研究 (Sinology)</h1>
                 <div class="flex space-x-6">
                     <a href="#query" class="text-gray-700 hover:text-purple-600 transition-colors">智能查询</a>
+                    <a href="#graphrag" class="text-gray-700 hover:text-purple-600 transition-colors">知识图谱</a>
                     <a href="#scholars" class="text-gray-700 hover:text-purple-600 transition-colors">著名学者</a>
                     <a href="#setup" class="text-gray-700 hover:text-purple-600 transition-colors">本地部署</a>
                     <a href="#about" class="text-gray-700 hover:text-purple-600 transition-colors">关于</a>
@@ -163,6 +203,73 @@
                         <div class="font-medium">20世纪汉学研究的主要趋势是什么？</div>
                         <div class="text-sm text-gray-600">历史发展脉络分析</div>
                     </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- GraphRAG知识图谱可视化 -->
+    <section id="graphrag" class="container mx-auto px-4 py-16 bg-white/50">
+        <div class="max-w-6xl mx-auto">
+            <h2 class="text-4xl font-bold text-center mb-8 gradient-text">📊 GraphRAG知识图谱可视化</h2>
+            <p class="text-center text-gray-600 mb-8">探索汉学家之间的学术关系网络和研究领域分布</p>
+            
+            <!-- 图谱控制面板 -->
+            <div class="bg-white rounded-lg shadow-lg p-6 mb-8">
+                <div class="grid grid-cols-1 md:grid-cols-4 gap-4">
+                    <div>
+                        <label class="block text-sm font-medium text-gray-700 mb-2">图谱类型</label>
+                        <select id="graph-type" class="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-purple-500">
+                            <option value="scholars">学者关系网络</option>
+                            <option value="fields">研究领域分布</option>
+                            <option value="timeline">时间线图谱</option>
+                            <option value="geography">地理分布</option>
+                        </select>
+                    </div>
+                    <div>
+                        <label class="block text-sm font-medium text-gray-700 mb-2">布局算法</label>
+                        <select id="layout-algorithm" class="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-purple-500">
+                            <option value="force">力导向布局</option>
+                            <option value="circular">环形布局</option>
+                            <option value="hierarchical">层次布局</option>
+                        </select>
+                    </div>
+                    <div>
+                        <label class="block text-sm font-medium text-gray-700 mb-2">节点大小</label>
+                        <input type="range" id="node-size" min="5" max="20" value="10" class="w-full">
+                    </div>
+                    <div>
+                        <label class="block text-sm font-medium text-gray-700 mb-2">操作</label>
+                        <div class="flex space-x-2">
+                            <button id="reset-graph" class="bg-gray-500 text-white px-3 py-2 rounded text-sm hover:bg-gray-600">重置</button>
+                            <button id="zoom-in" class="bg-blue-500 text-white px-3 py-2 rounded text-sm hover:bg-blue-600">放大</button>
+                            <button id="zoom-out" class="bg-blue-500 text-white px-3 py-2 rounded text-sm hover:bg-blue-600">缩小</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 知识图谱可视化区域 -->
+            <div class="bg-white rounded-lg shadow-lg p-6">
+                <div class="flex justify-between items-center mb-4">
+                    <h3 class="text-xl font-semibold">汉学家知识图谱</h3>
+                    <div class="text-sm text-gray-500">
+                        <span id="node-count">0</span> 个节点 | <span id="link-count">0</span> 个连接
+                    </div>
+                </div>
+                <div id="graph-container" class="graph-container">
+                    <!-- D3.js 图谱将在这里渲染 -->
+                </div>
+                <div class="mt-4 text-center text-sm text-gray-600">
+                    💡 提示：点击节点查看详细信息，拖拽节点调整位置，滚轮缩放图谱
+                </div>
+            </div>
+
+            <!-- 图谱信息面板 -->
+            <div id="graph-info" class="bg-white rounded-lg shadow-lg p-6 mt-8 hidden">
+                <h3 class="text-lg font-semibold mb-4">节点信息</h3>
+                <div id="node-details" class="text-gray-600">
+                    <!-- 节点详细信息将在这里显示 -->
                 </div>
             </div>
         </div>
@@ -287,7 +394,7 @@
                 </div>
             </div>
             <p class="text-gray-500 mt-8">
-                技术栈：GraphRAG + DeepSeek API + Flask + TailwindCSS
+                技术栈：GraphRAG + DeepSeek API + Flask + TailwindCSS + D3.js
             </p>
         </div>
     </section>
@@ -300,6 +407,203 @@
             '哪些汉学家研究中国古代文学？': '研究中国古代文学的著名汉学家包括：\n\n**古典文学翻译**：\n- 理雅各（James Legge）：翻译《四书五经》\n- 韦利（Arthur Waley）：翻译《诗经》、《论语》等\n- 霍克斯（David Hawkes）：翻译《红楼梦》\n\n**文学研究**：\n- 宇文所安（Stephen Owen）：唐诗研究\n- 高本汉（Bernhard Karlgren）：古代音韵学\n- 马伯乐（Henri Maspero）：道教文学研究\n\n**现代文学**：\n- 夏志清（C.T. Hsia）：中国现代小说研究\n- 李欧梵：现代文学批评\n\n这些学者为中国古代文学的海外传播做出了重要贡献。',
             '20世纪汉学研究的主要趋势是什么？': '20世纪汉学研究的主要趋势包括：\n\n**研究方法的转变**：\n- 从传教士汉学向学术汉学转变\n- 引入现代社会科学研究方法\n- 跨学科研究成为主流\n\n**研究领域的扩展**：\n- 从古典文献扩展到现代中国研究\n- 社会史、经济史、思想史等新领域兴起\n- 女性研究、少数民族研究等新视角\n\n**学术机构的建立**：\n- 大学设立专门的汉学系或东亚系\n- 建立研究机构和图书馆\n- 国际学术合作日益频繁\n\n**研究范式的变化**：\n- 从"西方中心论"向多元视角转变\n- 重视中国学者的声音和观点\n- 强调文化交流的双向性\n\n这些趋势反映了汉学研究的专业化和国际化发展。'
         };
+
+        // 模拟知识图谱数据
+        const graphData = {
+            nodes: [
+                { id: "费正清", name: "费正清", group: "美国", field: "近代史", size: 15 },
+                { id: "李约瑟", name: "李约瑟", group: "英国", field: "科技史", size: 12 },
+                { id: "理雅各", name: "理雅各", group: "英国", field: "古典文学", size: 10 },
+                { id: "伯希和", name: "伯希和", group: "法国", field: "敦煌学", size: 11 },
+                { id: "高本汉", name: "高本汉", group: "瑞典", field: "语言学", size: 9 },
+                { id: "马伯乐", name: "马伯乐", group: "法国", field: "古代史", size: 8 },
+                { id: "史景迁", name: "史景迁", group: "美国", field: "近代史", size: 7 },
+                { id: "宇文所安", name: "宇文所安", group: "美国", field: "古典文学", size: 8 },
+                { id: "夏志清", name: "夏志清", group: "美国", field: "现代文学", size: 6 },
+                { id: "韦利", name: "韦利", group: "英国", field: "古典文学", size: 7 }
+            ],
+            links: [
+                { source: "费正清", target: "史景迁", value: 5 },
+                { source: "费正清", target: "夏志清", value: 3 },
+                { source: "理雅各", target: "韦利", value: 4 },
+                { source: "理雅各", target: "宇文所安", value: 2 },
+                { source: "伯希和", target: "马伯乐", value: 6 },
+                { source: "高本汉", target: "宇文所安", value: 3 },
+                { source: "李约瑟", target: "费正清", value: 2 },
+                { source: "韦利", target: "宇文所安", value: 4 },
+                { source: "马伯乐", target: "高本汉", value: 2 },
+                { source: "史景迁", target: "夏志清", value: 3 }
+            ]
+        };
+
+        // D3.js 知识图谱可视化
+        let simulation, svg, g, link, node, tooltip;
+        let zoom = d3.zoom().scaleExtent([0.1, 4]);
+
+        function initGraph() {
+            const container = document.getElementById('graph-container');
+            const width = container.clientWidth;
+            const height = container.clientHeight;
+
+            // 清除现有内容
+            d3.select("#graph-container").selectAll("*").remove();
+
+            // 创建SVG
+            svg = d3.select("#graph-container")
+                .append("svg")
+                .attr("width", width)
+                .attr("height", height);
+
+            g = svg.append("g");
+
+            // 添加缩放功能
+            svg.call(zoom.on("zoom", (event) => {
+                g.attr("transform", event.transform);
+            }));
+
+            // 创建力导向模拟
+            simulation = d3.forceSimulation(graphData.nodes)
+                .force("link", d3.forceLink(graphData.links).id(d => d.id).distance(100))
+                .force("charge", d3.forceManyBody().strength(-300))
+                .force("center", d3.forceCenter(width / 2, height / 2))
+                .force("collision", d3.forceCollide().radius(30));
+
+            // 创建连接线
+            link = g.append("g")
+                .selectAll("line")
+                .data(graphData.links)
+                .enter().append("line")
+                .attr("class", "link")
+                .attr("stroke-width", d => Math.sqrt(d.value));
+
+            // 创建节点
+            node = g.append("g")
+                .selectAll("circle")
+                .data(graphData.nodes)
+                .enter().append("circle")
+                .attr("class", "node")
+                .attr("r", d => d.size)
+                .attr("fill", d => getNodeColor(d.group))
+                .call(d3.drag()
+                    .on("start", dragstarted)
+                    .on("drag", dragged)
+                    .on("end", dragended));
+
+            // 添加节点标签
+            g.append("g")
+                .selectAll("text")
+                .data(graphData.nodes)
+                .enter().append("text")
+                .attr("class", "node-label")
+                .attr("x", d => d.x)
+                .attr("y", d => d.y)
+                .text(d => d.name);
+
+            // 创建工具提示
+            tooltip = d3.select("body").append("div")
+                .attr("class", "tooltip")
+                .style("opacity", 0);
+
+            // 添加节点交互
+            node.on("mouseover", function(event, d) {
+                tooltip.transition()
+                    .duration(200)
+                    .style("opacity", .9);
+                tooltip.html(`
+                    <strong>${d.name}</strong><br/>
+                    国籍: ${d.group}<br/>
+                    研究领域: ${d.field}<br/>
+                    影响力: ${d.size}
+                `)
+                    .style("left", (event.pageX + 10) + "px")
+                    .style("top", (event.pageY - 28) + "px");
+            })
+            .on("mouseout", function(d) {
+                tooltip.transition()
+                    .duration(500)
+                    .style("opacity", 0);
+            })
+            .on("click", function(event, d) {
+                showNodeDetails(d);
+            });
+
+            // 更新模拟
+            simulation.on("tick", () => {
+                link
+                    .attr("x1", d => d.source.x)
+                    .attr("y1", d => d.source.y)
+                    .attr("x2", d => d.target.x)
+                    .attr("y2", d => d.target.y);
+
+                node
+                    .attr("cx", d => d.x)
+                    .attr("cy", d => d.y);
+
+                d3.selectAll(".node-label")
+                    .attr("x", d => d.x)
+                    .attr("y", d => d.y);
+            });
+
+            // 更新计数
+            document.getElementById('node-count').textContent = graphData.nodes.length;
+            document.getElementById('link-count').textContent = graphData.links.length;
+        }
+
+        function getNodeColor(group) {
+            const colors = {
+                "美国": "#667eea",
+                "英国": "#764ba2", 
+                "法国": "#f093fb",
+                "瑞典": "#4facfe",
+                "德国": "#43e97b",
+                "日本": "#fa709a"
+            };
+            return colors[group] || "#999";
+        }
+
+        function dragstarted(event, d) {
+            if (!event.active) simulation.alphaTarget(0.3).restart();
+            d.fx = d.x;
+            d.fy = d.y;
+        }
+
+        function dragged(event, d) {
+            d.fx = event.x;
+            d.fy = event.y;
+        }
+
+        function dragended(event, d) {
+            if (!event.active) simulation.alphaTarget(0);
+            d.fx = null;
+            d.fy = null;
+        }
+
+        function showNodeDetails(node) {
+            const infoPanel = document.getElementById('graph-info');
+            const details = document.getElementById('node-details');
+            
+            details.innerHTML = `
+                <div class="mb-4">
+                    <h4 class="font-semibold text-lg">${node.name}</h4>
+                    <p class="text-sm text-gray-500">${node.group} · ${node.field}</p>
+                </div>
+                <div class="space-y-2">
+                    <p><strong>研究领域:</strong> ${node.field}</p>
+                    <p><strong>国籍:</strong> ${node.group}</p>
+                    <p><strong>学术影响力:</strong> ${node.size}/15</p>
+                    <p><strong>相关学者:</strong> ${getRelatedScholars(node.id)}</p>
+                </div>
+            `;
+            
+            infoPanel.classList.remove('hidden');
+        }
+
+        function getRelatedScholars(scholarId) {
+            const related = graphData.links
+                .filter(link => link.source.id === scholarId || link.target.id === scholarId)
+                .map(link => link.source.id === scholarId ? link.target.id : link.source.id);
+            return related.join(', ') || '暂无';
+        }
 
         // 查询按钮事件
         document.getElementById('query-btn').addEventListener('click', async function() {
@@ -323,6 +627,19 @@
             }
             
             showDemoResponse(question);
+        });
+
+        // 图谱控制事件
+        document.getElementById('reset-graph').addEventListener('click', function() {
+            initGraph();
+        });
+
+        document.getElementById('zoom-in').addEventListener('click', function() {
+            svg.transition().call(zoom.scaleBy, 1.3);
+        });
+
+        document.getElementById('zoom-out').addEventListener('click', function() {
+            svg.transition().call(zoom.scaleBy, 0.7);
         });
 
         // 提交查询（演示版本）
@@ -391,6 +708,16 @@
                         block: 'start'
                     });
                 }
+            });
+        });
+
+        // 页面加载完成后初始化图谱
+        document.addEventListener('DOMContentLoaded', function() {
+            initGraph();
+            
+            // 响应式调整
+            window.addEventListener('resize', function() {
+                setTimeout(initGraph, 100);
             });
         });
     </script>

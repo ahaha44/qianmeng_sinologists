@@ -1,0 +1,363 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>汉学研究 - 智能知识图谱查询系统</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        .gradient-text {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+        .loading-spinner {
+            border: 3px solid #f3f3f3;
+            border-top: 3px solid #667eea;
+            border-radius: 50%;
+            width: 30px;
+            height: 30px;
+            animation: spin 1s linear infinite;
+        }
+        @keyframes spin {
+            0% { transform: rotate(0deg); }
+            100% { transform: rotate(360deg); }
+        }
+        .chat-message {
+            max-width: 80%;
+            margin: 10px 0;
+            padding: 15px;
+            border-radius: 15px;
+            word-wrap: break-word;
+        }
+        .chat-user {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            margin-left: auto;
+        }
+        .chat-assistant {
+            background: #f8f9fa;
+            color: #333;
+            border: 1px solid #e9ecef;
+        }
+    </style>
+</head>
+<body class="bg-gradient-to-br from-purple-50 via-pink-50 to-blue-50 min-h-screen">
+    <!-- Navigation -->
+    <nav class="sticky top-0 z-50 bg-white/90 backdrop-blur-md shadow-lg">
+        <div class="container mx-auto px-4 py-4">
+            <div class="flex justify-between items-center">
+                <h1 class="text-2xl font-bold gradient-text">汉学研究 (Sinology)</h1>
+                <div class="flex space-x-6">
+                    <a href="#query" class="text-gray-700 hover:text-purple-600 transition-colors">智能查询</a>
+                    <a href="#scholars" class="text-gray-700 hover:text-purple-600 transition-colors">著名学者</a>
+                    <a href="#about" class="text-gray-700 hover:text-purple-600 transition-colors">关于</a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="container mx-auto px-4 py-16">
+        <div class="text-center">
+            <h2 class="text-5xl font-bold mb-4 gradient-text">探索中西文化交流的桥梁</h2>
+            <p class="text-xl text-gray-700 max-w-3xl mx-auto">
+                基于GraphRAG技术的智能汉学研究数据库，让AI深度理解汉学家之间的关系和研究成果
+            </p>
+        </div>
+    </section>
+
+    <!-- 智能查询系统 -->
+    <section id="query" class="container mx-auto px-4 py-16">
+        <div class="max-w-4xl mx-auto">
+            <h2 class="text-4xl font-bold text-center mb-8 gradient-text">🤖 智能知识图谱查询系统</h2>
+            
+            <!-- 系统状态 -->
+            <div id="system-status" class="bg-white rounded-lg shadow-lg p-6 mb-8">
+                <h3 class="text-xl font-semibold mb-4">系统状态</h3>
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
+                    <div class="text-center">
+                        <div id="service-status" class="text-2xl mb-2">🔍</div>
+                        <div class="text-sm text-gray-600">服务状态</div>
+                    </div>
+                    <div class="text-center">
+                        <div id="graph-status" class="text-2xl mb-2">📊</div>
+                        <div class="text-sm text-gray-600">知识图谱</div>
+                    </div>
+                    <div class="text-center">
+                        <div id="files-count" class="text-2xl mb-2">📁</div>
+                        <div class="text-sm text-gray-600">数据文件</div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 查询界面 -->
+            <div class="bg-white rounded-lg shadow-lg p-6 mb-8">
+                <div class="mb-6">
+                    <label for="question" class="block text-sm font-medium text-gray-700 mb-2">请输入您的问题：</label>
+                    <textarea id="question" rows="3" class="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-purple-500" placeholder="例如：费正清的主要研究成果是什么？汉学家之间有什么联系？"></textarea>
+                </div>
+                
+                <div class="mb-6">
+                    <label class="block text-sm font-medium text-gray-700 mb-2">查询方法：</label>
+                    <div class="flex space-x-4">
+                        <label class="flex items-center">
+                            <input type="radio" name="method" value="global" checked class="mr-2">
+                            <span>全局查询 (宏观分析)</span>
+                        </label>
+                        <label class="flex items-center">
+                            <input type="radio" name="method" value="local" class="mr-2">
+                            <span>局部查询 (具体细节)</span>
+                        </label>
+                    </div>
+                </div>
+                
+                <div class="flex space-x-4">
+                    <button id="query-btn" class="bg-gradient-to-r from-purple-600 to-blue-600 text-white px-6 py-3 rounded-lg hover:from-purple-700 hover:to-blue-700 transition-all duration-300 flex items-center">
+                        <span id="query-text">🔍 开始查询</span>
+                        <div id="query-loading" class="loading-spinner ml-2 hidden"></div>
+                    </button>
+                    <button id="build-btn" class="bg-gradient-to-r from-green-600 to-teal-600 text-white px-6 py-3 rounded-lg hover:from-green-700 hover:to-teal-700 transition-all duration-300">
+                        🏗️ 构建知识图谱
+                    </button>
+                </div>
+            </div>
+
+            <!-- 查询结果 -->
+            <div id="query-results" class="bg-white rounded-lg shadow-lg p-6 hidden">
+                <h3 class="text-xl font-semibold mb-4">查询结果</h3>
+                <div id="chat-container" class="space-y-4 max-h-96 overflow-y-auto">
+                    <!-- 聊天消息将在这里显示 -->
+                </div>
+            </div>
+
+            <!-- 示例问题 -->
+            <div class="bg-white rounded-lg shadow-lg p-6">
+                <h3 class="text-xl font-semibold mb-4">💡 示例问题</h3>
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                    <div class="p-4 bg-gray-50 rounded-lg cursor-pointer hover:bg-gray-100 transition-colors" onclick="setExample('费正清的主要研究成果是什么？')">
+                        <div class="font-medium">费正清的主要研究成果是什么？</div>
+                        <div class="text-sm text-gray-600">了解著名汉学家的学术贡献</div>
+                    </div>
+                    <div class="p-4 bg-gray-50 rounded-lg cursor-pointer hover:bg-gray-100 transition-colors" onclick="setExample('汉学家之间有什么联系？')">
+                        <div class="font-medium">汉学家之间有什么联系？</div>
+                        <div class="text-sm text-gray-600">探索学者间的学术关系网络</div>
+                    </div>
+                    <div class="p-4 bg-gray-50 rounded-lg cursor-pointer hover:bg-gray-100 transition-colors" onclick="setExample('哪些汉学家研究中国古代文学？')">
+                        <div class="font-medium">哪些汉学家研究中国古代文学？</div>
+                        <div class="text-sm text-gray-600">按研究领域分类查询</div>
+                    </div>
+                    <div class="p-4 bg-gray-50 rounded-lg cursor-pointer hover:bg-gray-100 transition-colors" onclick="setExample('20世纪汉学研究的主要趋势是什么？')">
+                        <div class="font-medium">20世纪汉学研究的主要趋势是什么？</div>
+                        <div class="text-sm text-gray-600">历史发展脉络分析</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 著名学者 -->
+    <section id="scholars" class="container mx-auto px-4 py-16">
+        <div class="max-w-6xl mx-auto">
+            <h2 class="text-4xl font-bold text-center mb-12 gradient-text">著名汉学家</h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <div class="bg-white rounded-xl shadow-lg p-6">
+                    <div class="text-center">
+                        <div class="w-20 h-20 bg-gradient-to-br from-purple-400 to-blue-500 rounded-full mx-auto mb-4 flex items-center justify-center text-white text-2xl font-bold">费</div>
+                        <h3 class="text-xl font-bold mb-2">费正清 (John K. Fairbank)</h3>
+                        <p class="text-gray-600 text-sm mb-4">美国汉学泰斗，哈佛大学教授</p>
+                        <p class="text-gray-500 text-xs">研究领域：中国近代史、中美关系</p>
+                    </div>
+                </div>
+                <div class="bg-white rounded-xl shadow-lg p-6">
+                    <div class="text-center">
+                        <div class="w-20 h-20 bg-gradient-to-br from-green-400 to-teal-500 rounded-full mx-auto mb-4 flex items-center justify-center text-white text-2xl font-bold">李</div>
+                        <h3 class="text-xl font-bold mb-2">李约瑟 (Joseph Needham)</h3>
+                        <p class="text-gray-600 text-sm mb-4">英国科学史学家</p>
+                        <p class="text-gray-500 text-xs">研究领域：中国科技史、《中国科学技术史》</p>
+                    </div>
+                </div>
+                <div class="bg-white rounded-xl shadow-lg p-6">
+                    <div class="text-center">
+                        <div class="w-20 h-20 bg-gradient-to-br from-red-400 to-pink-500 rounded-full mx-auto mb-4 flex items-center justify-center text-white text-2xl font-bold">理</div>
+                        <h3 class="text-xl font-bold mb-2">理雅各 (James Legge)</h3>
+                        <p class="text-gray-600 text-sm mb-4">英国传教士、汉学家</p>
+                        <p class="text-gray-500 text-xs">研究领域：中国古典文学翻译、《四书五经》</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 关于 -->
+    <section id="about" class="container mx-auto px-4 py-16 bg-white/50">
+        <div class="max-w-4xl mx-auto text-center">
+            <h2 class="text-4xl font-bold mb-8 gradient-text">关于本项目</h2>
+            <p class="text-lg text-gray-600 mb-6">
+                这是一个基于GraphRAG技术的汉学研究智能查询系统，收录了数百位著名汉学家的详细资料。
+                通过先进的知识图谱技术，系统能够深度理解汉学家之间的关系、研究成果和学术贡献。
+            </p>
+            <p class="text-gray-500">
+                技术栈：GraphRAG + DeepSeek API + Flask + TailwindCSS
+            </p>
+        </div>
+    </section>
+
+    <script>
+        // API基础URL - 需要根据实际部署情况修改
+        const API_BASE = window.location.hostname === 'localhost' ? 'http://localhost:5000' : window.location.origin;
+        
+        // 页面加载时检查系统状态
+        document.addEventListener('DOMContentLoaded', function() {
+            checkSystemStatus();
+        });
+
+        // 检查系统状态
+        async function checkSystemStatus() {
+            try {
+                const response = await fetch(`${API_BASE}/api/status`);
+                const data = await response.json();
+                updateStatusDisplay(data);
+            } catch (error) {
+                console.error('状态检查失败:', error);
+                updateStatusDisplay({
+                    service: 'error',
+                    graphrag_available: false,
+                    knowledge_graph_built: false,
+                    input_files_count: 0
+                });
+            }
+        }
+
+        // 更新状态显示
+        function updateStatusDisplay(data) {
+            const serviceStatus = document.getElementById('service-status');
+            const graphStatus = document.getElementById('graph-status');
+            const filesCount = document.getElementById('files-count');
+            
+            serviceStatus.textContent = data.service === 'running' ? '✅' : '❌';
+            serviceStatus.title = data.service === 'running' ? '服务正常运行' : '服务异常';
+            
+            graphStatus.textContent = data.knowledge_graph_built ? '✅' : '⏳';
+            graphStatus.title = data.knowledge_graph_built ? '知识图谱已构建' : '知识图谱未构建';
+            
+            filesCount.textContent = `📁 ${data.input_files_count}`;
+            filesCount.title = `${data.input_files_count} 个数据文件`;
+        }
+
+        // 查询按钮事件
+        document.getElementById('query-btn').addEventListener('click', async function() {
+            const question = document.getElementById('question').value.trim();
+            const method = document.querySelector('input[name="method"]:checked').value;
+            
+            if (!question) {
+                alert('请输入查询问题');
+                return;
+            }
+            
+            await submitQuery(question, method);
+        });
+
+        // 构建按钮事件
+        document.getElementById('build-btn').addEventListener('click', async function() {
+            if (confirm('构建知识图谱可能需要较长时间，确定要继续吗？')) {
+                await buildKnowledgeGraph();
+            }
+        });
+
+        // 提交查询
+        async function submitQuery(question, method) {
+            const queryBtn = document.getElementById('query-btn');
+            const queryText = document.getElementById('query-text');
+            const queryLoading = document.getElementById('query-loading');
+            const resultsDiv = document.getElementById('query-results');
+            
+            queryText.textContent = '查询中...';
+            queryLoading.classList.remove('hidden');
+            queryBtn.disabled = true;
+            
+            addChatMessage(question, 'user');
+            
+            try {
+                const response = await fetch(`${API_BASE}/api/query`, {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/json',
+                    },
+                    body: JSON.stringify({
+                        question: question,
+                        method: method
+                    })
+                });
+                
+                const data = await response.json();
+                
+                if (data.success) {
+                    addChatMessage(data.answer, 'assistant');
+                } else {
+                    addChatMessage(`查询失败: ${data.error}`, 'assistant');
+                }
+                
+                resultsDiv.classList.remove('hidden');
+                
+            } catch (error) {
+                console.error('查询出错:', error);
+                addChatMessage('网络错误，请稍后重试', 'assistant');
+                resultsDiv.classList.remove('hidden');
+            } finally {
+                queryText.textContent = '🔍 开始查询';
+                queryLoading.classList.add('hidden');
+                queryBtn.disabled = false;
+            }
+        }
+
+        // 构建知识图谱
+        async function buildKnowledgeGraph() {
+            const buildBtn = document.getElementById('build-btn');
+            const originalText = buildBtn.textContent;
+            
+            buildBtn.textContent = '🏗️ 构建中...';
+            buildBtn.disabled = true;
+            
+            try {
+                const response = await fetch(`${API_BASE}/api/build`, {
+                    method: 'POST'
+                });
+                
+                const data = await response.json();
+                
+                if (data.success) {
+                    alert('知识图谱构建完成！');
+                    checkSystemStatus();
+                } else {
+                    alert(`构建失败: ${data.error}`);
+                }
+                
+            } catch (error) {
+                console.error('构建出错:', error);
+                alert('构建过程中出现错误，请稍后重试');
+            } finally {
+                buildBtn.textContent = originalText;
+                buildBtn.disabled = false;
+            }
+        }
+
+        // 添加聊天消息
+        function addChatMessage(content, type) {
+            const chatContainer = document.getElementById('chat-container');
+            const messageDiv = document.createElement('div');
+            messageDiv.className = `chat-message ${type === 'user' ? 'chat-user' : 'chat-assistant'}`;
+            messageDiv.textContent = content;
+            
+            chatContainer.appendChild(messageDiv);
+            chatContainer.scrollTop = chatContainer.scrollHeight;
+        }
+
+        // 设置示例问题
+        function setExample(question) {
+            document.getElementById('question').value = question;
+        }
+    </script>
+</body>
+</html>

@@ -35,6 +35,8 @@ neo4j>=5.15.0  # 可选，用于生产环境
 fastapi>=0.104.0
 uvicorn>=0.24.0
 pydantic>=2.5.0
+flask>=2.3.0
+flask-cors>=4.0.0
 
 ## 数据处理
 pandas>=2.1.0
